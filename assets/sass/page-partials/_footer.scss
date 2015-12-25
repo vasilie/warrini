@@ -1,0 +1,71 @@
+.footer {
+	width:100%;
+	height:24%;
+	position: relative;
+	bottom:0;
+	background: $color__primary--alpha;
+	padding-top: 4%;
+}
+.footer-nav__wrap {
+	float:right;
+	text-align: right;
+	@include breakpoint(mobile){
+		width: 100%;
+	}
+}
+.footer__wrap {
+	width:100%;
+	max-width:1350px;
+	margin:0 auto;
+	@include breakpoint(mobile){
+		text-align: center;
+	}
+}
+.g-plus-logo {
+	@include breakpoint(mobile){
+		margin-right: 10px;
+	}
+}
+.logo--small {
+	margin-top:1.6%;
+}
+.footer-nav {
+	list-style: none;
+	padding-top: 12px;
+	border-top: 1px solid $border__color--alpha;
+	margin: 12px 0;
+	@include breakpoint(mobile){
+		width: 100%;
+		text-align: center;
+		float: left;
+
+	}
+}
+.footer-nav__item {
+	display:inline;
+	position:relative;
+	font-size:14px;
+	color:$text__color--alpha;
+	padding-right: 20px;
+	font-family:$text__family--Roboto;
+	&:after {
+		content: " ";
+		height: 3px;
+		width: 3px;
+		border-radius:234px;
+		background:$text__color--alpha;
+		position:absolute;
+		top: 7px;
+		right: 6px;
+	}
+	a {
+		text-decoration: none;
+		color:$text__color--alpha;
+	}
+}
+.footer-nav__item--last {
+	padding-right:0;
+	&:after {
+		display: none;
+	}
+}
