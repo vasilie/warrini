@@ -1,0 +1,24 @@
+.main__heading {
+	font-size:30px;
+	color:$text__color--beta;
+	margin-top: 40px;
+	margin-bottom: 30px;
+}
+.small__heading {
+	font-size:20px;
+	color:$text__color--beta;
+	margin-bottom: 30px;
+}
+.main__text {
+	font-size:14px;
+	color:$text__color--alpha;
+	line-height: 24px;
+	margin-bottom: 20px;
+}
+.list {
+	padding-right:50px;
+}
+.list__item {
+	@extend .main__text;
+	font-family:$text__family--DroidKufiRegular;
+}

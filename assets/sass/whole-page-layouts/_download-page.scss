@@ -74,7 +74,7 @@
 	font-size:16px;
 	color:$text__color--alpha;
 }
-.main__text {
+.about__text {
 	margin-top: 30px;
 	line-height: 32px;
 	font-size: 14px;
@@ -84,12 +84,12 @@
 p {
     font-family: $text__family--DroidKufiRegular;
 }
-.main__text--desk {
+.about__text--desk {
 	@include breakpoint(mobile){
 		display: none;
 	}
 }
-.main__text--mobile {
+.about__text--mobile {
 	display:none;
 	@include breakpoint(mobile){
 		display: block;

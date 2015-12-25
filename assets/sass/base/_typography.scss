@@ -11,6 +11,6 @@ $base__line: 20 !default;
     font-family: Roboto;
     src: url(https://fonts.googleapis.com/css?family=Roboto);
 }
-p {
-    font-family: $text__family--DroidKufiRegular;
+h1, h2, p {
+    font-family:$text__family--DroidKufiRegular;
 }
