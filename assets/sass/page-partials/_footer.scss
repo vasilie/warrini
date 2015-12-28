@@ -5,6 +5,10 @@
 	bottom:0;
 	background: $color__primary--alpha;
 	padding-top: 4%;
+	float:left;
+	@include breakpoint(mobile){
+		padding-top: 2%;
+	}
 }
 .footer-nav__wrap {
 	float:right;
@@ -15,19 +19,22 @@
 }
 .footer__wrap {
 	width:100%;
-	max-width:1350px;
+	max-width:1024px;
+	padding: 0 4%;
 	margin:0 auto;
 	@include breakpoint(mobile){
-		text-align: center;
 	}
 }
 .g-plus-logo {
 	@include breakpoint(mobile){
-		margin-right: 10px;
 	}
 }
 .logo--small {
 	margin-top:1.6%;
+	@include breakpoint(mobile){
+		position: relative;
+		top: 21px;
+	}
 }
 .footer-nav {
 	list-style: none;
@@ -38,7 +45,7 @@
 		width: 100%;
 		text-align: center;
 		float: left;
-
+		margin-top: 31px;
 	}
 }
 .footer-nav__item {
