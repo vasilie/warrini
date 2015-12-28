@@ -12,7 +12,7 @@
 .container {
 	width:100%;
 	float:left;
-	margin-bottom: 74px;
+	margin-bottom: 50px;
 	@include breakpoint(mobile){
 		margin-bottom: 20px;
 	}
@@ -29,6 +29,7 @@
 .container__left {
 	padding-top: 9%;
 	width: 50%;
+	padding-right:2%;
 	@include breakpoint(mobile){
 		width: 100%;
 		padding:5%;
@@ -36,6 +37,7 @@
 	}
 }
 .container__right {
+	padding-left:2%;
 	@include breakpoint(mobile){
 		padding-top: 20px;
 	}
@@ -103,7 +105,7 @@
 	font-size: calc-rem(14px);
 	color:$text__color--alpha;
 	margin-top: 50px;
-	padding: 0 10%;
+	padding: 0;
 }
 p {
     font-family: $text__family--DroidKufiRegular;

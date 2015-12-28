@@ -214,7 +214,7 @@ body {
 .container {
   width: 100%;
   float: left;
-  margin-bottom: 74px; }
+  margin-bottom: 50px; }
   @media (max-width: 1024px) {
     .container {
       margin-bottom: 20px; } }
@@ -230,16 +230,19 @@ body {
 
 .container__left {
   padding-top: 9%;
-  width: 50%; }
+  width: 50%;
+  padding-right: 2%; }
   @media (max-width: 1024px) {
     .container__left {
       width: 100%;
       padding: 5%;
       margin: 0; } }
 
-@media (max-width: 1024px) {
-  .container__right {
-    padding-top: 20px; } }
+.container__right {
+  padding-left: 2%; }
+  @media (max-width: 1024px) {
+    .container__right {
+      padding-top: 20px; } }
 
 .phone1__wrap, .phone2__wrap {
   float: left;
@@ -301,7 +304,7 @@ body {
   font-size: 0.875rem;
   color: #666;
   margin-top: 50px;
-  padding: 0 10%; }
+  padding: 0; }
 
 p {
   font-family: "DroidKufiRegular", Helvetica, Arial, sans-serif; }
