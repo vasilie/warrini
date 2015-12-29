@@ -26,6 +26,16 @@
 	}
 }
 .g-plus-logo {
+	background-image: url(../../assets/img/gplus-sprite.png);
+	background-repeat: no-repeat;
+	height: 15px;
+	width: 24px;
+	margin-left: auto;
+	background-position:0;
+	cursor:pointer;
+	&:hover {
+		background-position:-37px;
+	}
 	@include breakpoint(mobile){
 	}
 }

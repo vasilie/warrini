@@ -7,10 +7,18 @@
 }
 .button--last {
 	@include breakpoint(mobile){
-		margin-top: 20px;
+		margin-top: calc-rem(20px);
 	}
 }
 .link {
-	margin-bottom:20px;
-	color:pink;
+	margin-bottom:calc-rem(25px);
+	color:$text__color--delta;
+  display: block;
+	text-decoration: none;
+	font-family: $text__family--Roboto;
+}
+.link--inline {
+	color:$text__color--delta;
+	text-decoration: none;
+
 }
