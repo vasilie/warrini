@@ -99,15 +99,18 @@
 	margin-bottom: 30px;
 	font-size:calc-rem(16px);
 	color:$text__color--alpha;
-	font-family:$text__family--Roboto;
+	font-family:$text__family--DroidKufiRegular;
 }
 .about__text {
 	margin-top: 30px;
 	line-height: calc-rem(32px);
-	font-size: calc-rem(14px);
+	font-size: calc-rem(13px);
 	color:$text__color--alpha;
 	margin-top: 50px;
 	padding: 0;
+}
+.about__text--small-margin{
+	margin-top: 20px;
 }
 p {
     font-family: $text__family--DroidKufiRegular;

@@ -3,7 +3,8 @@
   height: 72px;
 	border-bottom:1px solid $border__color--alpha;
 	text-align:right;
-	position: fixed;
+	position: absolute;
+	z-index: 99;
 	top:0;
 	left:0;
 	background: white;

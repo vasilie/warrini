@@ -22,3 +22,29 @@
 	text-decoration: none;
 
 }
+.back-to-top {
+	position:relative;
+	float: right;
+	bottom: 30px;
+	right: 30px;
+	cursor: pointer;
+	height: 70px;
+	opacity: 0;
+	width: 70px;
+	background-image:url(../../assets/img/back-to-top-sprite.png);
+	background-repeat: no-repeat;
+	background-position: 0;
+	@include transitionFor(opacity 600ms);
+	&.visible {
+		opacity: 1;
+	}
+	&.stick {
+		position:fixed;
+		@include breakpoint(mobile){
+			position:relative;
+		}
+	}
+}
+.back-to-top:hover {
+	background-position: -78px;
+}

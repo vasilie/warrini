@@ -83,6 +83,32 @@ html {
   color: #FC4D62;
   text-decoration: none; }
 
+.back-to-top {
+  position: relative;
+  float: right;
+  bottom: 30px;
+  right: 30px;
+  cursor: pointer;
+  height: 70px;
+  opacity: 0;
+  width: 70px;
+  background-image: url(../../assets/img/back-to-top-sprite.png);
+  background-repeat: no-repeat;
+  background-position: 0;
+  -webkit-transition: opacity 600ms;
+  -o-transition: opacity 600ms;
+  transition: opacity 600ms; }
+  .back-to-top.visible {
+    opacity: 1; }
+  .back-to-top.stick {
+    position: fixed; }
+    @media (max-width: 1024px) {
+      .back-to-top.stick {
+        position: relative; } }
+
+.back-to-top:hover {
+  background-position: -78px; }
+
 .list {
   padding-right: 50px;
   position: relative;
@@ -149,7 +175,6 @@ html {
   margin-bottom: 1.5625rem; }
 
 html, body {
-  height: 100%;
   width: 100%; }
 
 body {
@@ -163,13 +188,13 @@ body {
 
 .main__wrapper {
   width: 100%;
+  position: relative;
   padding-top: 84px;
   margin: 0 auto;
   margin-top: 4.5625rem;
   max-width: 755px;
   direction: rtl;
-  padding-left: 153px;
-  padding-bottom: 7.5rem; }
+  padding-left: 153px; }
   @media (max-width: 1024px) {
     .main__wrapper {
       padding-left: 5%;
@@ -182,7 +207,8 @@ body {
   height: 72px;
   border-bottom: 1px solid #dadada;
   text-align: right;
-  position: fixed;
+  position: absolute;
+  z-index: 99;
   top: 0;
   left: 0;
   background: white;
@@ -203,7 +229,7 @@ body {
 
 .footer {
   width: 100%;
-  height: 24%;
+  height: 230px;
   position: relative;
   bottom: 0;
   background: #FAFBFB;
@@ -227,6 +253,7 @@ body {
   margin: 0 auto; }
 
 .g-plus-logo {
+  display: none;
   background-image: url(../../assets/img/gplus-sprite.png);
   background-repeat: no-repeat;
   height: 15px;
@@ -238,7 +265,8 @@ body {
     background-position: -37px; }
 
 .logo--small {
-  margin-top: 1.6%; }
+  margin-top: 1.6%;
+  width: 100px; }
   @media (max-width: 1024px) {
     .logo--small {
       position: relative;
@@ -257,12 +285,12 @@ body {
       margin-top: 31px; } }
 
 .footer-nav__item {
-  display: inline;
+  display: inline-block;
   position: relative;
   font-size: 14px;
   color: #666;
   padding-right: 20px;
-  font-family: "Roboto", Helvetica, Arial, sans-serif; }
+  font-family: "DroidKufiRegular", Helvetica, Arial, sans-serif; }
   .footer-nav__item:after {
     content: " ";
     height: 3px;
@@ -379,15 +407,18 @@ body {
   margin-bottom: 30px;
   font-size: 1rem;
   color: #666;
-  font-family: "Roboto", Helvetica, Arial, sans-serif; }
+  font-family: "DroidKufiRegular", Helvetica, Arial, sans-serif; }
 
 .about__text {
   margin-top: 30px;
   line-height: 2rem;
-  font-size: 0.875rem;
+  font-size: 0.8125rem;
   color: #666;
   margin-top: 50px;
   padding: 0; }
+
+.about__text--small-margin {
+  margin-top: 20px; }
 
 p {
   font-family: "DroidKufiRegular", Helvetica, Arial, sans-serif; }

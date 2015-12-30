@@ -1,5 +1,4 @@
 html, body {
-	height:100%;
 	width:100%;
 }
 body {
@@ -15,13 +14,14 @@ body {
 }
 .main__wrapper {
 	width:100%;
+	position: relative;
   padding-top: 84px;
 	margin:0 auto;
 	margin-top: calc-rem(73px);
 	max-width: 755px;
 	direction:rtl;
 	padding-left: 153px;
-	padding-bottom: calc-rem(120px);
+	// padding-bottom: calc-rem(120px);
 	@include breakpoint(mobile){
 		padding-left:5%;
 		padding-right:5%;
