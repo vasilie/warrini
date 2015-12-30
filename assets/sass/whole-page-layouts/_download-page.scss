@@ -1,0 +1,133 @@
+.page-wrapper {
+	width: 100%;
+	max-width: 1024px;
+	margin: 0 auto;
+	padding: 9% 4% 0%;
+	position:relative;
+	@include breakpoint(mobile){
+		margin:0;
+		padding:0;
+	}
+}
+.container {
+	width:100%;
+	float:left;
+	margin-bottom: 50px;
+	@include breakpoint(mobile){
+		margin-bottom: 20px;
+	}
+}
+.container__left, .container__right {
+	width:50%;
+	float:left;
+	position:relative;
+	text-align: center;
+	@include breakpoint(mobile){
+		width: 100% !important;
+	}
+}
+.container__left {
+	padding-top: 9%;
+	width: 50%;
+	padding-right:2%;
+	@include breakpoint(mobile){
+		width: 100%;
+		padding:5%;
+		margin:0;
+	}
+}
+.container__right {
+	padding-left:2%;
+	@include breakpoint(mobile){
+		padding-top: 20px;
+	}
+}
+.phone1__wrap, .phone2__wrap {
+	float: left;
+	width: 61%;
+	position: absolute;
+	img {
+		width: 120%;
+		float: left;
+		left: -10%;
+		position: relative;
+	}
+	@include breakpoint(mobile){
+		width: 59%;
+	}
+}
+.phone1__wrap {
+	z-index:20;
+	.screen {
+		top: 11.2%;
+		width: 83.5%;
+		left: 7.6%;
+		position:absolute;
+	}
+	@include breakpoint(mobile){
+		position:relative;
+		left:3%;
+	}
+}
+.phone2__wrap {
+	padding-top: 4%;
+	left: 40%;
+	position: relative;
+	z-index: -5;
+	width: 63%;
+	.screen {
+		top: 12.8%;
+	   left: 5.5%;
+	   width: 85%;
+	   position:absolute;
+	}
+	@include breakpoint(mobile){
+		position:absolute;
+		padding-top: 4%;
+		width: 57%;
+	}
+}
+.logo {
+	width: 28%;
+	margin-bottom: 32px;
+	width: 53%;
+	@include breakpoint(mobile){
+		width: 68%;
+	}
+}
+.info-heading {
+	margin-bottom: 30px;
+	font-size:calc-rem(16px);
+	color:$text__color--alpha;
+	font-family:$text__family--DroidKufiRegular;
+}
+.about__text {
+	margin-top: 30px;
+	line-height: calc-rem(32px);
+	font-size: calc-rem(13px);
+	color:$text__color--alpha;
+	margin-top: 50px;
+	padding: 0;
+}
+.about__text--small-margin{
+	margin-top: 20px;
+}
+p {
+    font-family: $text__family--DroidKufiRegular;
+}
+.about__text--desk {
+	@include breakpoint(mobile){
+		display: none;
+	}
+}
+.about__text--mobile {
+	display:none;
+	@include breakpoint(mobile){
+		display: block;
+		float: left;
+		margin-top: 10px;
+		font-size: calc-rem(13px);
+		padding: 0 4%;
+		margin-bottom: 20px;
+	}
+}

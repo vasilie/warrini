@@ -1,0 +1,441 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both; }
+
+@font-face {
+  font-family: DroidKufiRegular;
+  src: url(../../assets/font/DroidKufiRegular.ttf); }
+@font-face {
+  font-family: Roboto;
+  src: url(https://fonts.googleapis.com/css?family=Roboto); }
+h1, h2, p {
+  font-family: "DroidKufiRegular", Helvetica, Arial, sans-serif; }
+
+html {
+  font-size: 16px; }
+
+.button {
+  margin: 0 1.3%;
+  height: 100%;
+  width: auto; }
+
+@media (max-width: 1024px) {
+  .button--last {
+    margin-top: 1.25rem; } }
+
+.link {
+  margin-bottom: 1.5625rem;
+  color: #FC4D62;
+  display: block;
+  text-decoration: none;
+  font-family: "Roboto", Helvetica, Arial, sans-serif; }
+
+.link--inline {
+  color: #FC4D62;
+  text-decoration: none; }
+
+.back-to-top {
+  position: relative;
+  float: right;
+  bottom: 30px;
+  right: 30px;
+  cursor: pointer;
+  height: 70px;
+  opacity: 0;
+  width: 70px;
+  background-image: url(../../assets/img/back-to-top-sprite.png);
+  background-repeat: no-repeat;
+  background-position: 0;
+  -webkit-transition: opacity 600ms;
+  -o-transition: opacity 600ms;
+  transition: opacity 600ms; }
+  .back-to-top.visible {
+    opacity: 1; }
+  .back-to-top.stick {
+    position: fixed; }
+    @media (max-width: 1024px) {
+      .back-to-top.stick {
+        position: relative; } }
+
+.back-to-top:hover {
+  background-position: -78px; }
+
+.list {
+  padding-right: 50px;
+  position: relative;
+  z-index: -5;
+  font-family: "Roboto", Helvetica, Arial, sans-serif; }
+  @media (max-width: 1024px) {
+    .list {
+      padding-right: 34px; } }
+
+.ordered.list {
+  counter-reset: item;
+  list-style-type: none;
+  margin-bottom: 8.75rem; }
+
+.list__item {
+  position: relative;
+  font-family: "DroidKufiRegular", Helvetica, Arial, sans-serif; }
+
+.list__item:before {
+  content: "";
+  display: block;
+  height: 6px;
+  width: 6px;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  -ms-border-radius: 50px;
+  -o-border-radius: 50px;
+  border-radius: 50px;
+  background: #bbb;
+  position: absolute;
+  top: 7px;
+  right: -47px; }
+  @media (max-width: 1024px) {
+    .list__item:before {
+      right: -29px; } }
+
+.ordered .list__item:before {
+  content: counter(item) "  ";
+  counter-increment: item;
+  background: transparent;
+  font-size: 1.5rem;
+  color: #bbb;
+  top: 0; }
+
+.main__heading {
+  font-size: 1.875rem;
+  color: #333;
+  margin-bottom: 4rem; }
+  @media (max-width: 1024px) {
+    .main__heading {
+      margin-bottom: 2.125rem;
+      line-height: 2.5rem; } }
+
+.small__heading {
+  font-size: 1.25rem;
+  color: #333;
+  margin-bottom: 2.1875rem;
+  margin-top: 2.8125rem; }
+
+.main__text, .list__item {
+  font-size: 0.875rem;
+  color: #666;
+  line-height: 1.75rem;
+  margin-bottom: 1.5625rem; }
+
+html, body {
+  width: 100%; }
+
+body {
+  background-image: url(../../assets/img/triangle-watermark.png);
+  background-repeat: no-repeat;
+  background-position: 0 -221px;
+  background-size: 594px; }
+
+.no-background {
+  background: none; }
+
+.main__wrapper {
+  width: 100%;
+  position: relative;
+  padding-top: 84px;
+  margin: 0 auto;
+  margin-top: 4.5625rem;
+  max-width: 755px;
+  direction: rtl;
+  padding-left: 153px; }
+  @media (max-width: 1024px) {
+    .main__wrapper {
+      padding-left: 5%;
+      padding-right: 5%;
+      margin-top: 2.0625rem;
+      padding-bottom: 1.5rem; } }
+
+.header {
+  width: 100%;
+  height: 72px;
+  border-bottom: 1px solid #dadada;
+  text-align: right;
+  position: absolute;
+  z-index: 99;
+  top: 0;
+  left: 0;
+  background: white;
+  -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.2); }
+  .header .logo {
+    height: 100%;
+    width: auto; }
+
+.header-wrap {
+  width: 100%;
+  height: 100%;
+  max-width: 1084px;
+  margin: 0 auto;
+  padding: 14px 0;
+  padding-right: 24px; }
+
+.footer {
+  width: 100%;
+  height: 230px;
+  position: relative;
+  bottom: 0;
+  background: #FAFBFB;
+  padding-top: 4%;
+  float: left; }
+  @media (max-width: 1024px) {
+    .footer {
+      padding-top: 2%; } }
+
+.footer-nav__wrap {
+  float: right;
+  text-align: right; }
+  @media (max-width: 1024px) {
+    .footer-nav__wrap {
+      width: 100%; } }
+
+.footer__wrap {
+  width: 100%;
+  max-width: 1024px;
+  padding: 0 4%;
+  margin: 0 auto; }
+
+.g-plus-logo {
+  display: none;
+  background-image: url(../../assets/img/gplus-sprite.png);
+  background-repeat: no-repeat;
+  height: 15px;
+  width: 24px;
+  margin-left: auto;
+  background-position: 0;
+  cursor: pointer; }
+  .g-plus-logo:hover {
+    background-position: -37px; }
+
+.logo--small {
+  margin-top: 1.6%;
+  width: 100px; }
+  @media (max-width: 1024px) {
+    .logo--small {
+      position: relative;
+      top: 21px; } }
+
+.footer-nav {
+  list-style: none;
+  padding-top: 12px;
+  border-top: 1px solid #dadada;
+  margin: 12px 0; }
+  @media (max-width: 1024px) {
+    .footer-nav {
+      width: 100%;
+      text-align: center;
+      float: left;
+      margin-top: 31px; } }
+
+.footer-nav__item {
+  display: inline-block;
+  position: relative;
+  font-size: 14px;
+  color: #666;
+  padding-right: 20px;
+  font-family: "DroidKufiRegular", Helvetica, Arial, sans-serif; }
+  .footer-nav__item:after {
+    content: " ";
+    height: 3px;
+    width: 3px;
+    border-radius: 234px;
+    background: #666;
+    position: absolute;
+    top: 7px;
+    right: 6px; }
+  .footer-nav__item a {
+    text-decoration: none;
+    color: #666; }
+
+.footer-nav__item--last {
+  padding-right: 0; }
+  .footer-nav__item--last:after {
+    display: none; }
+
+.page-wrapper {
+  width: 100%;
+  max-width: 1024px;
+  margin: 0 auto;
+  padding: 9% 4% 0%;
+  position: relative; }
+  @media (max-width: 1024px) {
+    .page-wrapper {
+      margin: 0;
+      padding: 0; } }
+
+.container {
+  width: 100%;
+  float: left;
+  margin-bottom: 50px; }
+  @media (max-width: 1024px) {
+    .container {
+      margin-bottom: 20px; } }
+
+.container__left, .container__right {
+  width: 50%;
+  float: left;
+  position: relative;
+  text-align: center; }
+  @media (max-width: 1024px) {
+    .container__left, .container__right {
+      width: 100% !important; } }
+
+.container__left {
+  padding-top: 9%;
+  width: 50%;
+  padding-right: 2%; }
+  @media (max-width: 1024px) {
+    .container__left {
+      width: 100%;
+      padding: 5%;
+      margin: 0; } }
+
+.container__right {
+  padding-left: 2%; }
+  @media (max-width: 1024px) {
+    .container__right {
+      padding-top: 20px; } }
+
+.phone1__wrap, .phone2__wrap {
+  float: left;
+  width: 61%;
+  position: absolute; }
+  .phone1__wrap img, .phone2__wrap img {
+    width: 120%;
+    float: left;
+    left: -10%;
+    position: relative; }
+  @media (max-width: 1024px) {
+    .phone1__wrap, .phone2__wrap {
+      width: 59%; } }
+
+.phone1__wrap {
+  z-index: 20; }
+  .phone1__wrap .screen {
+    top: 11.2%;
+    width: 83.5%;
+    left: 7.6%;
+    position: absolute; }
+  @media (max-width: 1024px) {
+    .phone1__wrap {
+      position: relative;
+      left: 3%; } }
+
+.phone2__wrap {
+  padding-top: 4%;
+  left: 40%;
+  position: relative;
+  z-index: -5;
+  width: 63%; }
+  .phone2__wrap .screen {
+    top: 12.8%;
+    left: 5.5%;
+    width: 85%;
+    position: absolute; }
+  @media (max-width: 1024px) {
+    .phone2__wrap {
+      position: absolute;
+      padding-top: 4%;
+      width: 57%; } }
+
+.logo {
+  width: 28%;
+  margin-bottom: 32px;
+  width: 53%; }
+  @media (max-width: 1024px) {
+    .logo {
+      width: 68%; } }
+
+.info-heading {
+  margin-bottom: 30px;
+  font-size: 1rem;
+  color: #666;
+  font-family: "DroidKufiRegular", Helvetica, Arial, sans-serif; }
+
+.about__text {
+  margin-top: 30px;
+  line-height: 2rem;
+  font-size: 0.8125rem;
+  color: #666;
+  margin-top: 50px;
+  padding: 0; }
+
+.about__text--small-margin {
+  margin-top: 20px; }
+
+p {
+  font-family: "DroidKufiRegular", Helvetica, Arial, sans-serif; }
+
+@media (max-width: 1024px) {
+  .about__text--desk {
+    display: none; } }
+
+.about__text--mobile {
+  display: none; }
+  @media (max-width: 1024px) {
+    .about__text--mobile {
+      display: block;
+      float: left;
+      margin-top: 10px;
+      font-size: 0.8125rem;
+      padding: 0 4%;
+      margin-bottom: 20px; } }
+
+/*# sourceMappingURL=main.css.map */
