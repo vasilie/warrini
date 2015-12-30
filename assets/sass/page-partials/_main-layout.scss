@@ -8,9 +8,7 @@ body {
 	background-size: 594px;
 }
 .no-background {
-	// background: url(../../assets/img/warrini-private-policy-page.jpg);
 	background: none;
-	// background-position: 0 0px;
 }
 .main__wrapper {
 	width:100%;
@@ -21,7 +19,6 @@ body {
 	max-width: 755px;
 	direction:rtl;
 	padding-left: 153px;
-	// padding-bottom: calc-rem(120px);
 	@include breakpoint(mobile){
 		padding-left:5%;
 		padding-right:5%;
