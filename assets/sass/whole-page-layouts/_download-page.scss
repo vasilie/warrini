@@ -27,7 +27,7 @@
 	}
 }
 .container__left {
-	padding-top: 1%;
+	padding-top: 9%;
 	width: 50%;
 	padding-right:2%;
 	@include breakpoint(mobile){
@@ -109,7 +109,9 @@
 	margin-top: 50px;
 	padding: 0;
 }
-
+.about__text--small-margin{
+	margin-top: 20px;
+}
 p {
     font-family: $text__family--DroidKufiRegular;
 }
@@ -127,9 +129,5 @@ p {
 		font-size: calc-rem(13px);
 		padding: 0 4%;
 		margin-bottom: 20px;
-		margin-top:30px;
 	}
-}
-.about__text--small-margin{
-	margin-top: 20px;
 }
