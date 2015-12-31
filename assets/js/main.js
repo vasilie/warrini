@@ -1,7 +1,6 @@
 function scrollToTop(){
   var duration = 1500; //default
   duration = $(window).scrollTop() /2.750+250;
-  console.log(duration);
   $("body,html").animate({scrollTop:0}, duration , 'swing');
 }
 $(function(){
