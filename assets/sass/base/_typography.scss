@@ -1,15 +1,13 @@
-$text__family--DroidKufiRegular:  "DroidKufiRegular", Helvetica, Arial, sans-serif !default;
+$text__family--DroidKufiRegular:  "Droid Arabic Kufi", Helvetica, Arial, sans-serif !default;
 $text__family--Roboto:  "Roboto", Helvetica, Arial, sans-serif !default;
 $base__font-size: 16px !default;
 $base__line: 20 !default;
 
-@font-face {
-    font-family: DroidKufiRegular;
-    src: url(../../assets/font/DroidKufiRegular.ttf);
-}
+@import url(http://fonts.googleapis.com/earlyaccess/droidarabickufi.css);
+
 @font-face {
     font-family: Roboto;
-    src: url(https://fonts.googleapis.com/css?family=Roboto);
+    src: url(https://fonts.googleapis.com/css?family=Roboto) format('truetype');
 }
 h1, h2, p {
     font-family:$text__family--DroidKufiRegular;
