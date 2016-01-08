@@ -8,6 +8,7 @@ var gulp = require("gulp"),
     sass = require("gulp-sass"),
     plumber = require("gulp-plumber"),
     browserSync = require("browser-sync"),
+    del = require("del"),
     reload = browserSync.reload;
 
 // /////////////////////////////////////////////////
@@ -46,12 +47,47 @@ gulp.task("html", function(){
 });
 
 // /////////////////////////////////////////////////
+// Build Tasks
+// /////////////////////////////////////////////////
+
+//clear all files from build folder
+gulp.task('build:cleanfolder', function(){
+    return del([
+      'build/**'
+    ]);
+});
+
+//task to create build directory for all files
+gulp.task("build:copy", ['build:cleanfolder'], function(){
+  return gulp.src("app/**/*")
+  .pipe(gulp.dest('build/'));
+});
+
+//task to remove unwanted build files
+gulp.task('build:remove', ['build:copy'], function(){
+    return del([
+      'build/assets/sass',
+      'build/assets/js/!(*.min.js)'
+    ]);
+});
+
+gulp.task('build',['build:remove']);
+
+// /////////////////////////////////////////////////
 // Browser-Sync Task
 // /////////////////////////////////////////////////
 gulp.task('browser-sync', function(){
   browserSync({
     server:{
       baseDir:"./app/"
+    }
+  })
+});
+
+gulp.task('build:serve', function(){
+  browserSync({
+    server:{
+      baseDir:"./build/"
     }
   })
 });
