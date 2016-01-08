@@ -12,7 +12,6 @@
 .container {
 	width:100%;
 	float:left;
-	margin-bottom: 50px;
 	@include breakpoint(mobile){
 		margin-bottom: 20px;
 	}
