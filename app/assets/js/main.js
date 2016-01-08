@@ -1,3 +1,5 @@
+'use strict';
+
 function scrollToTop(){
   var duration = 1500; //default
   duration = $(window).scrollTop() /2.750+250;
