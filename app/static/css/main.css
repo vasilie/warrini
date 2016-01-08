@@ -58,6 +58,7 @@ a:hover, a:active, a:focus {
 @font-face {
   font-family: Roboto;
   src: url(https://fonts.googleapis.com/css?family=Roboto) format("truetype"); }
+
 h1, h2, p {
   font-family: "Droid Arabic Kufi", Helvetica, Arial, sans-serif; }
 
@@ -439,5 +440,3 @@ p {
 
 .about__text--small-margin {
   margin-top: 20px; }
-
-/*# sourceMappingURL=main.css.map */
