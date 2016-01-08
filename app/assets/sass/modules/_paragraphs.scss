@@ -1,0 +1,21 @@
+.main__heading {
+	font-size:calc-rem(30px);
+	color:$text__color--beta;
+  margin-bottom: calc-rem(64px);
+	@include breakpoint(mobile){
+		margin-bottom: calc-rem(34px);
+		line-height: calc-rem(40px);
+	}
+}
+.small__heading {
+	font-size:calc-rem(20px);
+	color:$text__color--beta;
+	margin-bottom: calc-rem(35px);
+	margin-top: calc-rem(45px);
+}
+.main__text {
+	font-size:calc-rem(14px);
+	color:$text__color--alpha;
+	line-height: calc-rem(28px);
+	margin-bottom: calc-rem(25px);
+}

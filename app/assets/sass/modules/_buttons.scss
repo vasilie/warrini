@@ -1,0 +1,50 @@
+.button__container {
+}
+.button {
+	margin: 0 1.3%;
+	height: 100%;
+	width:auto;
+}
+.button--last {
+	@include breakpoint(mobile){
+		margin-top: calc-rem(20px);
+	}
+}
+.link {
+	margin-bottom:calc-rem(25px);
+	color:$text__color--delta;
+  display: block;
+	text-decoration: none;
+	font-family: $text__family--Roboto;
+}
+.link--inline {
+	color:$text__color--delta;
+	text-decoration: none;
+
+}
+.back-to-top {
+	position:relative;
+	float: right;
+	bottom: 30px;
+	right: 30px;
+	cursor: pointer;
+	height: 70px;
+	opacity: 0;
+	width: 70px;
+	background-image:url(../../assets/img/back-to-top-sprite.png);
+	background-repeat: no-repeat;
+	background-position: 0;
+	@include transitionFor(opacity 600ms);
+	&.visible {
+		opacity: 1;
+	}
+	&.stick {
+		position:fixed;
+		@include breakpoint(mobile){
+			position:relative;
+		}
+	}
+}
+.back-to-top:hover {
+	background-position: -78px;
+}
