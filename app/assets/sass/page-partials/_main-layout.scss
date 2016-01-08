@@ -19,7 +19,7 @@ body {
 	max-width: 755px;
 	direction:rtl;
 	padding-left: 153px;
-	@include breakpoint(mobile){
+	@include breakpoint(tablet){
 		padding-left:5%;
 		padding-right:5%;
 		margin-top: calc-rem(33px);

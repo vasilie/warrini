@@ -2,7 +2,7 @@
 	font-size:calc-rem(30px);
 	color:$text__color--beta;
   margin-bottom: calc-rem(64px);
-	@include breakpoint(mobile){
+	@include breakpoint(tablet){
 		margin-bottom: calc-rem(34px);
 		line-height: calc-rem(40px);
 	}

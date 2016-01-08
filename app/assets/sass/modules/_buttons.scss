@@ -6,7 +6,7 @@
 	width:auto;
 }
 .button--last {
-	@include breakpoint(mobile){
+	@include breakpoint(tablet){
 		margin-top: calc-rem(20px);
 	}
 }
@@ -40,7 +40,7 @@
 	}
 	&.stick {
 		position:fixed;
-		@include breakpoint(mobile){
+		@include breakpoint(tablet){
 			position:relative;
 		}
 	}

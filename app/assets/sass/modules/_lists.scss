@@ -3,7 +3,7 @@
 	position: relative;
 	z-index: -5;
   font-family: $text__family--Roboto;
-  @include breakpoint(mobile){
+  @include breakpoint(tablet){
 	  padding-right:34px;
 	}
 }
@@ -28,7 +28,7 @@
 	position:absolute;
 	top: 7px;
 	right: -47px;
-  @include breakpoint(mobile){
+  @include breakpoint(tablet){
     right:-29px;
   }
 }

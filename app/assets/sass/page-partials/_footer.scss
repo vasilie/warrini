@@ -6,14 +6,14 @@
 	background: $color__primary--alpha;
 	padding-top: 4%;
 	float:left;
-	@include breakpoint(mobile){
+	@include breakpoint(tablet){
 		padding-top: 2%;
 	}
 }
 .footer-nav__wrap {
 	float:right;
 	text-align: right;
-	@include breakpoint(mobile){
+	@include breakpoint(tablet){
 		width: 100%;
 	}
 }
@@ -22,7 +22,7 @@
 	max-width:1024px;
 	padding: 0 4%;
 	margin:0 auto;
-	@include breakpoint(mobile){
+	@include breakpoint(tablet){
 	}
 }
 .g-plus-logo {
@@ -37,13 +37,13 @@
 	&:hover {
 		background-position:-37px;
 	}
-	@include breakpoint(mobile){
+	@include breakpoint(tablet){
 	}
 }
 .logo--small {
 	margin-top:1.6%;
 	width: 100px;
-	@include breakpoint(mobile){
+	@include breakpoint(tablet){
 		position: relative;
 		top: 21px;
 	}
@@ -53,7 +53,7 @@
 	padding-top: 12px;
 	border-top: 1px solid $border__color--alpha;
 	margin: 12px 0;
-	@include breakpoint(mobile){
+	@include breakpoint(tablet){
 		width: 100%;
 		text-align: center;
 		float: left;

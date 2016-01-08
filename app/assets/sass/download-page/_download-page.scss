@@ -4,7 +4,7 @@
 	margin: 0 auto;
 	padding: 9% 4% 0%;
 	position:relative;
-	@include breakpoint(mobile){
+	@include breakpoint(tablet){
 		margin:0;
 		padding:0;
 	}
@@ -12,7 +12,7 @@
 .container {
 	width:100%;
 	float:left;
-	@include breakpoint(mobile){
+	@include breakpoint(tablet){
 		margin-bottom: 20px;
 	}
 }
@@ -21,7 +21,7 @@
 	float:left;
 	position:relative;
 	text-align: center;
-	@include breakpoint(mobile){
+	@include breakpoint(tablet){
 		width: 100% !important;
 	}
 }
@@ -29,7 +29,11 @@
 	padding-top: 1%;
 	width: 50%;
 	padding-right:2%;
-	@include breakpoint(mobile){
+	&>a {
+		display: block;
+		// height: 50px;
+	}
+	@include breakpoint(tablet){
 		width: 100%;
 		padding:5%;
 		margin:0;
@@ -37,7 +41,7 @@
 }
 .container__right {
 	padding-left:2%;
-	@include breakpoint(mobile){
+	@include breakpoint(tablet){
 		padding-top: 20px;
 	}
 }
@@ -51,47 +55,79 @@
 		left: -10%;
 		position: relative;
 	}
-	@include breakpoint(mobile){
+	@include breakpoint(tablet){
 		width: 59%;
 	}
 }
 .phone1__wrap {
 	z-index:20;
+	.phone {
+		background-image: url("../../assets/img/iphone-6-mockup.png");
+    background-repeat: no-repeat;
+    width: 119%;
+    background-size: contain;
+    padding-top: 205%;
+    background-position: 49%;
+	}
 	.screen {
 		top: 11.2%;
 		width: 83.5%;
-		left: 7.6%;
+    left: 16.6%;
 		position:absolute;
+		background-image: url("../../assets/img/iphone-screen.png");
+		background-repeat: no-repeat;
+    background-size: contain;
+		padding-top: 148%;
 	}
-	@include breakpoint(mobile){
+	@include breakpoint(tablet){
 		position:relative;
 		left:3%;
+		width:54%;
 	}
 }
 .phone2__wrap {
-	padding-top: 4%;
-	left: 40%;
+	padding-top: 5.2%;
+	left: 43%;
 	position: relative;
 	z-index: -5;
 	width: 63%;
-	.screen {
-		top: 12.8%;
-	   left: 5.5%;
-	   width: 85%;
-	   position:absolute;
+	.phone {
+		background-image: url("../../assets/img/samsung-s6-gold.png");
+    background-repeat: no-repeat;
+    width: 119%;
+    background-size: contain;
+    padding-top: 199%;
+    background-position: 49%;
 	}
-	@include breakpoint(mobile){
+	.screen {
+		top: 13.6%;
+    left: 14.8%;
+    width: 85%;
+    position: absolute;
+    background-image: url("../../assets/img/android-screen.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    padding-top: 148%;
+	}
+	@include breakpoint(tablet){
 		position:absolute;
 		padding-top: 4%;
-		width: 57%;
+		width: 52.6%;
+		left:37%;
 	}
 }
 .logo {
 	width: 28%;
 	margin-bottom: 32px;
-	width: 53%;
-	@include breakpoint(mobile){
-		width: 68%;
+	height: 100px;
+	width: 100%;
+	background-image: url("../../assets/img/warrini-logo-large.png");
+	background-position: center;
+	background-repeat: no-repeat;
+
+	@include breakpoint(tablet){
+		width: 100%;
+		background-image: url("../../assets/img/warrini-logo-large.png");
 	}
 }
 .info-heading {
@@ -113,13 +149,13 @@ p {
     font-family: $text__family--DroidKufiRegular;
 }
 .about__text--desk {
-	@include breakpoint(mobile){
+	@include breakpoint(tablet){
 		display: none;
 	}
 }
 .about__text--mobile {
 	display:none;
-	@include breakpoint(mobile){
+	@include breakpoint(tablet){
 		display: block;
 		float: left;
 		margin-top: 10px;
