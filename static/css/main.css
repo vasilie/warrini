@@ -1,3 +1,4 @@
+@import url(http://fonts.googleapis.com/earlyaccess/droidarabickufi.css);
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -51,14 +52,14 @@ table {
   display: table;
   clear: both; }
 
-@font-face {
-  font-family: DroidKufiRegular;
-  src: url(../../assets/font/DroidKufiRegular.ttf); }
+a:hover, a:active, a:focus {
+  outline: none; }
+
 @font-face {
   font-family: Roboto;
-  src: url(https://fonts.googleapis.com/css?family=Roboto); }
+  src: url(https://fonts.googleapis.com/css?family=Roboto) format("truetype"); }
 h1, h2, p {
-  font-family: "DroidKufiRegular", Helvetica, Arial, sans-serif; }
+  font-family: "Droid Arabic Kufi", Helvetica, Arial, sans-serif; }
 
 html {
   font-size: 16px; }
@@ -125,7 +126,7 @@ html {
 
 .list__item {
   position: relative;
-  font-family: "DroidKufiRegular", Helvetica, Arial, sans-serif; }
+  font-family: "Droid Arabic Kufi", Helvetica, Arial, sans-serif; }
 
 .list__item:before {
   content: "";
@@ -290,7 +291,7 @@ body {
   font-size: 14px;
   color: #666;
   padding-right: 20px;
-  font-family: "DroidKufiRegular", Helvetica, Arial, sans-serif; }
+  font-family: "Droid Arabic Kufi", Helvetica, Arial, sans-serif; }
   .footer-nav__item:after {
     content: " ";
     height: 3px;
@@ -407,7 +408,7 @@ body {
   margin-bottom: 30px;
   font-size: 1rem;
   color: #666;
-  font-family: "DroidKufiRegular", Helvetica, Arial, sans-serif; }
+  font-family: "Droid Arabic Kufi", Helvetica, Arial, sans-serif; }
 
 .about__text {
   margin-top: 30px;
@@ -418,7 +419,7 @@ body {
   padding: 0; }
 
 p {
-  font-family: "DroidKufiRegular", Helvetica, Arial, sans-serif; }
+  font-family: "Droid Arabic Kufi", Helvetica, Arial, sans-serif; }
 
 @media (max-width: 1024px) {
   .about__text--desk {
