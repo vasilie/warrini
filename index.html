@@ -6,9 +6,40 @@
 	<link rel="stylesheet" href="static/css/main.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="vendor/js/jquery.cookie.js"></script>
+	<script src="assets/js/lightbox.js"></script>
 	<link rel="shortcut icon" type="image/x-icon" href="assets/img/warrini-favicon.ico">
 </head>
 <body>
+	<!-- LightBox -->
+	<div class="lightbox__container">
+		<div class="lightbox__mask"></div>
+		<div class="lightbox">
+			<div class="lightbox__close" onclick='hideLightBox()'></div>
+			<div class="lightbox__image">
+				<img src="assets/img/lightbox/lightbox-image0.png" alt="" class='active'>
+				<img src="assets/img/lightbox/lightbox-image1.png" alt="" >
+				<img src="assets/img/lightbox/lightbox-image2.png" alt="" >
+			</div>
+			<div class="lightbox__content">
+				<div class="lightbox__logo">
+					<img src='assets/img/warrini-logo-large.png'></img>
+				</div>
+				<h1>Sign up for Our Newsletter</h1>
+				<p>ل تبحثون عن حيل ذكية تسهّل حياتبعون آخر الصيحات ولكن لا تعرفون إن كانت فعلاً تستحق كلّ </p>
+				<div class="lightbox__form">
+					<form action="">
+						<input type="text" class='lightbox__email' placeholder='E-mail adress' name='lightbox-email'>
+						<div class='lightbox__button'>Submit</div>
+					</form>
+				</div>
+				<div class="lightbox__footer">
+					<p>Privacy</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Lightbox end -->
 	<div class="page-wrapper clearfix">
 		<div class="container">
 			<div class="container__left">

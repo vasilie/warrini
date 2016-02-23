@@ -1,0 +1,198 @@
+.lightbox__container {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 200;
+  display: none;
+  opacity: 0;
+}
+.lightbox__mask {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  background: rgba(0, 0, 0, 0.87);
+  z-index: 19;
+}
+.lightbox {
+  width: 970px;
+  height: 539px;
+  background: white;
+  position: relative;
+  z-index: 20;
+  top: calc((100% - 540px)/2);
+  left: calc((100% - 970px)/2);
+  @include breakpoint(mobile){
+    width:calc(100% - 20px);
+    height: calc(100% - 20px);
+    top: 10px;
+    left: 10px;
+  }
+}
+.lightbox__close {
+  position: absolute;
+  height: 63px;
+  width: 57px;
+  background-image: url('../../assets/img/close-icon-black.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 9999;
+  cursor: pointer;
+  @include breakpoint(mobile){
+    background-position: center;
+    background-size: 20px;
+    background-repeat: no-repeat;
+    height: 40px;
+    width: 40px;
+    background-image: url('../../assets/img/close-icon-white.png');
+  }
+}
+.lightbox__image {
+  float: right;
+  width: 484px;
+  overflow: hidden;
+  height: 100%;
+  position: relative;
+  img {
+    @include transitionFor(all 2000ms);
+    position: absolute;
+    top:0;
+    bottom:0;
+    width:101%;
+    opacity: 0;
+  }
+  img.active {
+    opacity: 1;
+  }
+  @include breakpoint(mobile){
+    float: left;
+    height: 37%;
+    width: 100%;
+    img {
+      width: 100%;
+    }
+  }
+  @include breakpoint(iphone6){
+    height:40%;
+  }
+}
+.lightbox__content {
+  position: relative;
+  float: left;
+  width: 484px;
+  height: 100%;
+  text-align: center;
+  h1 {
+    font-size: calc-rem(30px);
+    font-family: $text__family--DroidKufiRegular;
+    color: #333;
+    margin-top: 60px;
+    font-weight: 100;
+    margin-bottom: 29px;
+  }
+  p {
+    font-size: calc-rem(16px);
+    font-family: $text__family--DroidKufiRegular;
+    color: #ccc;
+    width: 74%;
+    margin-left: 13%;
+    line-height: 26px;
+    margin-bottom: 42px;
+  }
+  @include breakpoint(mobile){
+    width:100%;
+    height: 63%;
+    h1 {
+      font-size: 20px;
+      margin-top: 17px;
+      margin-bottom: 10px;
+    }
+    p {
+      font-size: 12px;
+      margin-left: 5%;
+      width: 90%;
+    }
+  }
+  @include breakpoint(iphone4){
+    p {
+      display: none;
+    }
+  }
+  @include breakpoint(iphone6){
+    height:60%;
+    h1 {
+      margin-top:28px;
+    }
+  }
+}
+.lightbox__logo {
+  text-align: center;
+  margin-top: 76px;
+  @include breakpoint(mobile){
+    margin-top: 17px;
+    img {
+      width: 110px;
+    }
+  }
+}
+.lightbox__form {
+  overflow: hidden;
+  position: absolute;
+  bottom: 108px;
+  @include breakpoint(mobile){
+    bottom: 0;
+    width: 100%;
+    padding-bottom: 20px;
+  }
+  @include breakpoint(iphone6){
+    padding-bottom: 40px;
+  }
+}
+.lightbox__email {
+  width: 286px;
+  height: 46px;
+  float: left;
+  margin-left: 37px;
+  border: 1px solid #999;
+  font-size: calc-rem(17px);
+  font-family: $text__family--Roboto;
+  padding-left: 18px;
+  @include borderRadius(0px);
+  @include breakpoint(mobile){
+    width: 80%;
+    margin-left: 10%;
+    height: 40px;
+    margin-bottom: 10px;
+  }
+}
+.lightbox__button {
+  width: 120px;
+  height: 46px;
+  line-height: 46px;
+  float: left;
+  color: white;
+  font-size: 17px;
+  background: #333;
+  @include borderRadius(0px);
+  border: none;
+  font-family: $text__family--Roboto;
+  @include breakpoint(mobile){
+    width: 80%;
+    margin-left: 10%;
+    height: 40px;
+    line-height: 40px;
+  }
+}
+.lightbox__footer {
+  position: absolute;
+  width: 100%;
+  bottom:0;
+  p {
+    font-family: $text__family--Roboto;
+    color:#999;
+    font-size: calc-rem(15px);
+    margin-bottom: 28px;
+  }
+  @include breakpoint(mobile){
+    display:none;
+  }
+}

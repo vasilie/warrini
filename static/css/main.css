@@ -110,6 +110,202 @@ html {
 .back-to-top:hover {
   background-position: -78px; }
 
+.lightbox__container {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 200;
+  display: none;
+  opacity: 0; }
+
+.lightbox__mask {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  background: rgba(0, 0, 0, 0.87);
+  z-index: 19; }
+
+.lightbox {
+  width: 970px;
+  height: 539px;
+  background: white;
+  position: relative;
+  z-index: 20;
+  top: calc((100% - 540px)/2);
+  left: calc((100% - 970px)/2); }
+  @media (max-width: 1024px) {
+    .lightbox {
+      width: calc(100% - 20px);
+      height: calc(100% - 20px);
+      top: 10px;
+      left: 10px; } }
+
+.lightbox__close {
+  position: absolute;
+  height: 63px;
+  width: 57px;
+  background-image: url("../../assets/img/close-icon-black.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 9999;
+  cursor: pointer; }
+  @media (max-width: 1024px) {
+    .lightbox__close {
+      background-position: center;
+      background-size: 20px;
+      background-repeat: no-repeat;
+      height: 40px;
+      width: 40px;
+      background-image: url("../../assets/img/close-icon-white.png"); } }
+
+.lightbox__image {
+  float: right;
+  width: 484px;
+  overflow: hidden;
+  height: 100%;
+  position: relative; }
+  .lightbox__image img {
+    -webkit-transition: all 2000ms;
+    -o-transition: all 2000ms;
+    transition: all 2000ms;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 101%;
+    opacity: 0; }
+  .lightbox__image img.active {
+    opacity: 1; }
+  @media (max-width: 1024px) {
+    .lightbox__image {
+      float: left;
+      height: 37%;
+      width: 100%; }
+      .lightbox__image img {
+        width: 100%; } }
+  @media (min-device-width: 375px) and (max-device-width: 667px) {
+    .lightbox__image {
+      height: 40%; } }
+
+.lightbox__content {
+  position: relative;
+  float: left;
+  width: 484px;
+  height: 100%;
+  text-align: center; }
+  .lightbox__content h1 {
+    font-size: 1.875rem;
+    font-family: "Droid Arabic Kufi", Helvetica, Arial, sans-serif;
+    color: #333;
+    margin-top: 60px;
+    font-weight: 100;
+    margin-bottom: 29px; }
+  .lightbox__content p {
+    font-size: 1rem;
+    font-family: "Droid Arabic Kufi", Helvetica, Arial, sans-serif;
+    color: #ccc;
+    width: 74%;
+    margin-left: 13%;
+    line-height: 26px;
+    margin-bottom: 42px; }
+  @media (max-width: 1024px) {
+    .lightbox__content {
+      width: 100%;
+      height: 63%; }
+      .lightbox__content h1 {
+        font-size: 20px;
+        margin-top: 17px;
+        margin-bottom: 10px; }
+      .lightbox__content p {
+        font-size: 12px;
+        margin-left: 5%;
+        width: 90%; } }
+  @media (min-device-width: 320px) and (max-height: 450px) {
+    .lightbox__content p {
+      display: none; } }
+  @media (min-device-width: 375px) and (max-device-width: 667px) {
+    .lightbox__content {
+      height: 60%; }
+      .lightbox__content h1 {
+        margin-top: 28px; } }
+
+.lightbox__logo {
+  text-align: center;
+  margin-top: 76px; }
+  @media (max-width: 1024px) {
+    .lightbox__logo {
+      margin-top: 17px; }
+      .lightbox__logo img {
+        width: 110px; } }
+
+.lightbox__form {
+  overflow: hidden;
+  position: absolute;
+  bottom: 108px; }
+  @media (max-width: 1024px) {
+    .lightbox__form {
+      bottom: 0;
+      width: 100%;
+      padding-bottom: 20px; } }
+  @media (min-device-width: 375px) and (max-device-width: 667px) {
+    .lightbox__form {
+      padding-bottom: 40px; } }
+
+.lightbox__email {
+  width: 286px;
+  height: 46px;
+  float: left;
+  margin-left: 37px;
+  border: 1px solid #999;
+  font-size: 1.0625rem;
+  font-family: "Roboto", Helvetica, Arial, sans-serif;
+  padding-left: 18px;
+  -webkit-border-radius: 0px !important;
+  -moz-border-radius: 0px !important;
+  -ms-border-radius: 0px !important;
+  -o-border-radius: 0px !important;
+  border-radius: 0px !important; }
+  @media (max-width: 1024px) {
+    .lightbox__email {
+      width: 80%;
+      margin-left: 10%;
+      height: 40px;
+      margin-bottom: 10px; } }
+
+.lightbox__button {
+  width: 120px;
+  height: 46px;
+  line-height: 46px;
+  float: left;
+  color: white;
+  font-size: 17px;
+  background: #333;
+  -webkit-border-radius: 0px !important;
+  -moz-border-radius: 0px !important;
+  -ms-border-radius: 0px !important;
+  -o-border-radius: 0px !important;
+  border-radius: 0px !important;
+  border: none;
+  font-family: "Roboto", Helvetica, Arial, sans-serif; }
+  @media (max-width: 1024px) {
+    .lightbox__button {
+      width: 80%;
+      margin-left: 10%;
+      height: 40px;
+      line-height: 40px; } }
+
+.lightbox__footer {
+  position: absolute;
+  width: 100%;
+  bottom: 0; }
+  .lightbox__footer p {
+    font-family: "Roboto", Helvetica, Arial, sans-serif;
+    color: #999;
+    font-size: 0.9375rem;
+    margin-bottom: 28px; }
+  @media (max-width: 1024px) {
+    .lightbox__footer {
+      display: none; } }
+
 .list {
   padding-right: 50px;
   position: relative;
@@ -133,11 +329,11 @@ html {
   display: block;
   height: 6px;
   width: 6px;
-  -webkit-border-radius: 50px;
-  -moz-border-radius: 50px;
-  -ms-border-radius: 50px;
-  -o-border-radius: 50px;
-  border-radius: 50px;
+  -webkit-border-radius: 50px !important;
+  -moz-border-radius: 50px !important;
+  -ms-border-radius: 50px !important;
+  -o-border-radius: 50px !important;
+  border-radius: 50px !important;
   background: #bbb;
   position: absolute;
   top: 7px;

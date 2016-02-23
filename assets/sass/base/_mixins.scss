@@ -1,9 +1,9 @@
 @mixin borderRadius($radius){
-	-webkit-border-radius: $radius;
-	-moz-border-radius: $radius;
-	-ms-border-radius: $radius;
-	-o-border-radius: $radius;
-	border-radius: $radius;
+	-webkit-border-radius: $radius !important;
+	-moz-border-radius: $radius !important;
+	-ms-border-radius: $radius !important;
+	-o-border-radius: $radius !important;
+	border-radius: $radius !important;
 }
 @mixin boxShadow($top, $left, $blur, $spread, $color, $inset: false) {
   @if $inset {
