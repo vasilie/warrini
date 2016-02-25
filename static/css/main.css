@@ -131,14 +131,16 @@ html {
   background: white;
   position: relative;
   z-index: 20;
-  top: calc((100% - 540px)/2);
-  left: calc((100% - 970px)/2); }
+  top: 50%;
+  margin: 0 auto;
+  margin-top: -270px; }
   @media (max-width: 1024px) {
     .lightbox {
       width: calc(100% - 20px);
       height: calc(100% - 20px);
       top: 10px;
-      left: 10px; } }
+      left: 10px;
+      margin-top: 0; } }
 
 .lightbox__close {
   position: absolute;
