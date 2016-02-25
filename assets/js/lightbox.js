@@ -1,10 +1,9 @@
-var images = [], image_interval;
-var image_no = 1;
-preloadImages();
+var image_interval,
+    image_no = 0;
 $(function(){
   if ($.cookie("lightbox")== undefined){
     setTimeout(function(){
-      showLightBox();
+      showLightBox(500);
       var date = new Date();
       var minutes = 1;
       date.setTime(date.getTime() + (minutes * 60 * 1000));
@@ -12,30 +11,37 @@ $(function(){
     },2000);
   }
 });
-function showLightBox(){
-  image_interval = setInterval(function() {
-    image_no++;
-    if (image_no > 3){
-      image_no = 1;
-    }
-    $(".lightbox__image img").removeClass('active');
-    $(".lightbox__image img:nth-child("+image_no+')').addClass('active');
-
-  },6000);
+function showLightBox(speed){
+  switchImages(6000);
   $(".lightbox__container").css({'display':"block"});
-  $(".lightbox__container").animate({'opacity':"1"},500);
+  $(".lightbox__container").animate({'opacity':"1"},speed);
 }
-function hideLightBox(){
+function hideLightBox(speed){
   clearInterval(image_interval);
-  $(".lightbox__container").animate({'opacity':"0"},500);
+  $(".lightbox__container").animate({'opacity':"0"},speed);
   setTimeout(function(){
     $(".lightbox__container").css({'display':"none"});
-  },500);
+  },speed);
 }
-function preloadImages(){
-  for (i=1;i<3;i++){
-    var image = new Image();
-    image.src='assets/img/lightbox/lightbox-image'+i+'.png';
-    images.push(image);
+function switchImages(intervalDuration){
+  if ($(window).outerWidth()> 1024){
+    var additionalClass = '.desk'
+  } else {
+    var additionalClass = '.mobile'
   }
+
+  var image__container = $(".lightbox__image-container"+additionalClass),
+      images = $(image__container).find("img"),
+      img_length = images.length;
+
+  image_interval = setInterval(function() {
+    image_no++;
+    if (image_no > img_length-1){
+      image_no = 0;
+    }
+    $(images).removeClass('active').addClass("inactive");
+    $(images[image_no]).removeClass('inactive').addClass('active');
+    $(image__container).find("img.inactive").animate({"opacity":"0"},2000);
+    $(image__container).find("img.active").animate({"opacity":"1"},2000);
+  },intervalDuration);
 }

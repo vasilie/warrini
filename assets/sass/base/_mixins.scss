@@ -19,5 +19,6 @@
 @mixin transitionFor($type){
 	-webkit-transition: $type;
 	-o-transition: $type;
+	-ms-transition:$type;
 	transition: $type;
 }
