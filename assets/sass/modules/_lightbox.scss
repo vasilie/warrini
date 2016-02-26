@@ -155,10 +155,10 @@
   }
 }
 .lightbox__email {
-  width: 286px;
+  width: 288px;
   height: 46px;
   outline: none;
-  float: left;
+  float: right;
   border: 1px solid #999;
   color:#4a4a4a;
   font-size: calc-rem(17px);
@@ -190,6 +190,7 @@
   font-family: $text__family--Roboto;
   @include breakpoint(mobile){
     width: 100%;
+    margin-bottom: 10px;
     height: 40px;
     line-height: 40px;
   }

@@ -262,10 +262,10 @@ html {
       padding-bottom: 40px; } }
 
 .lightbox__email {
-  width: 286px;
+  width: 288px;
   height: 46px;
   outline: none;
-  float: left;
+  float: right;
   border: 1px solid #999;
   color: #4a4a4a;
   font-size: 1.0625rem;
@@ -305,6 +305,7 @@ html {
   @media (max-width: 1024px) {
     .lightbox__button {
       width: 100%;
+      margin-bottom: 10px;
       height: 40px;
       line-height: 40px; } }
 
