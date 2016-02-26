@@ -251,7 +251,8 @@ html {
 .lightbox__form {
   overflow: hidden;
   width: 406px;
-  margin: 0 auto; }
+  margin: 0 auto;
+  direction: rtl; }
   @media (max-width: 1024px) {
     .lightbox__form {
       width: 100%;

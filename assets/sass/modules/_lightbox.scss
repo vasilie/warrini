@@ -145,6 +145,7 @@
   overflow: hidden;
   width: 406px;
   margin: 0 auto;
+  direction: rtl;
   @include breakpoint(mobile){
     width: 100%;
     padding:0 20px 20px;
