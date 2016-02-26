@@ -142,8 +142,8 @@
   }
 }
 .lightbox__form {
+  width: 408px;
   overflow: hidden;
-  width: 406px;
   margin: 0 auto;
   direction: rtl;
   @include breakpoint(mobile){
@@ -157,11 +157,18 @@
 .lightbox__email {
   width: 286px;
   height: 46px;
+  outline: none;
   float: left;
   border: 1px solid #999;
+  color:#4a4a4a;
   font-size: calc-rem(17px);
   font-family: $text__family--Roboto;
   padding: 0 18px;
+  &.placeholder {
+    font-size: calc-rem(17px);
+    font-family: $text__family--Roboto;
+    color:#999;
+  }
   @include borderRadius(0px);
   @include breakpoint(mobile){
     width: 100%;
