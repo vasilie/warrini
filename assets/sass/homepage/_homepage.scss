@@ -1,0 +1,118 @@
+.scroll-container {
+  height:100%;
+  position: relative;
+  @include transitionFor(all 1500ms ease);
+
+  top:0;
+}
+.scroll__section {
+  height:6000px;
+}
+.scroll__section--one {
+  background: linear-gradient(to bottom, #31abaa 0,#fff   100%);
+}
+.scroll__section--two {
+  background: linear-gradient(to bottom,#fff   0,#3e33a1 100%);
+}
+.scroll__section--three {
+  background: linear-gradient(to bottom,#3e33a1 0,yellow 100%);
+}
+.scroll__section--four {
+  background: linear-gradient(to bottom,#4fd0ea 0,#fff 100%);
+}
+.top-elements__container {
+  height: 900px;
+  position: relative;
+}
+.top-element {
+  position: absolute;
+}
+.nike-shoes {
+  width: 358px;
+  right: -154px;
+}
+.bag {
+  bottom: -55px;
+  right: -150px;
+  width: 508px;
+}
+.joe-page {
+  bottom:-30px;
+  left:0;
+  width: 450px;
+  position: fixed;
+  opacity: 1;
+  @include transitionFor(all 600ms ease-in-out);
+}
+.letter-j {
+  width: 164px;
+  top: 200px;
+  left: 321px;
+}
+.letter-o {
+  width: 204px;
+  top: 400px;
+  left: 463px;
+}
+.letter-e {
+  width: 152px;
+  top: 500px;
+  left: 691px;
+}
+.fixed-content {
+  height: 100%;
+  position: fixed;
+  width:100%;
+  display: table;
+  z-index: 10;
+}
+.content {
+  display: table-cell;
+  vertical-align: middle;
+  padding: 0 20%;
+  position: relative;
+}
+.device-container {
+  float: right;
+  width: 50%;
+  padding: 0 80px;
+
+  img {
+    width:220px;
+  }
+}
+
+.text-slide {
+  width: 50%;
+  float: left;
+  padding: 20px;
+  text-align: right;
+  direction: rtl;
+  color:white;
+  @include transitionFor(all 1000ms);
+  position: absolute;
+}
+.text-slide--first {
+  opacity: 1;
+}
+.text-slide--second {
+  opacity: 0;
+  color:#333;
+  h2,p {
+    top:30px;
+    opacity: 0;
+  }
+}
+.static-content__heading {
+  font-size: 24px;
+  margin-bottom: 26px;
+  position: relative;
+}
+.static-content__text {
+  line-height: 25px;
+  font-size: 11px;
+  position: relative;
+}
+.text-container {
+  position: relative;
+}
