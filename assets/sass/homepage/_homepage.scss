@@ -19,12 +19,9 @@
 .scroll-container {
   height:100%;
   position: relative;
-  @include transitionFor(all 1500ms ease);
-
-  top:0;
 }
 .scroll__section {
-  height:6000px;
+  height:6000px !important;
 }
 .scroll__section--one {
   background: linear-gradient(to bottom, #31abaa 0,#FDFDFD 100%);
@@ -138,10 +135,12 @@
   font-size: 19px;
   margin-bottom: 26px;
   position: relative;
+  color:#333;
 }
 .static-content__text {
   line-height: 25px;
   font-size: 11px;
+  color:#333;
   position: relative;
 }
 .text-container {
@@ -150,6 +149,18 @@
   float: right;
   width: 270px;
   margin-top: 55px;
+
+}
+.text-slide {
+  opacity: 0;
+
+  &.active {
+    opacity: 1;
+  }
+  h2, p, .dp-buttons {
+    opacity: 0;
+    top:30px;
+  }
 }
 .db-footer {
   width: 100%;

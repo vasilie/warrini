@@ -658,14 +658,10 @@ p {
 
 .scroll-container {
   height: 100%;
-  position: relative;
-  -webkit-transition: all 1500ms ease;
-  -o-transition: all 1500ms ease;
-  transition: all 1500ms ease;
-  top: 0; }
+  position: relative; }
 
 .scroll__section {
-  height: 6000px; }
+  height: 6000px !important; }
 
 .scroll__section--one {
   background: linear-gradient(to bottom, #31abaa 0, #FDFDFD 100%); }
@@ -777,11 +773,13 @@ p {
 .static-content__heading {
   font-size: 19px;
   margin-bottom: 26px;
-  position: relative; }
+  position: relative;
+  color: #333; }
 
 .static-content__text {
   line-height: 25px;
   font-size: 11px;
+  color: #333;
   position: relative; }
 
 .text-container {
@@ -790,6 +788,14 @@ p {
   float: right;
   width: 270px;
   margin-top: 55px; }
+
+.text-slide {
+  opacity: 0; }
+  .text-slide.active {
+    opacity: 1; }
+  .text-slide h2, .text-slide p, .text-slide .dp-buttons {
+    opacity: 0;
+    top: 30px; }
 
 .db-footer {
   width: 100%;
