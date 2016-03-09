@@ -290,6 +290,10 @@
   @include breakpoint(iphone4) {
     bottom: 20px;
   }
+  @include breakpoint(large) {
+    height: 60px;
+    line-height: 60px;
+  }
 }
 .dp-footer-arrow {
   position: absolute;
@@ -306,13 +310,17 @@
   width: 100%;
   height: 40px;
   line-height: calc-rem(40px);
-  z-index: 100;
+  z-index: 101;
   @include breakpoint(mobile) {
     text-align: center;
     bottom: 0px;
   }
   @include breakpoint(iphone4) {
     display: none;
+  }
+  @include breakpoint(large) {
+    height: 60px;
+    line-height: 60px;
   }
 }
 .dp-prefooter-text {
@@ -327,6 +335,9 @@
     font-size: calc-rem(10px);
     padding: 0;
   }
+  @include breakpoint(large) {
+    font-size: calc-rem(14px);
+  }
 }
 .channel__wrapper {
   float:right;
@@ -336,6 +347,9 @@
   position: relative;
   @include breakpoint(mobile) {
     display: none;
+  }
+  @include breakpoint(large) {
+    height: 60px;
   }
 }
 .channel {
@@ -351,6 +365,9 @@
 .channel__ico {
   float:right;
   height: 40px;
+  @include breakpoint(large) {
+    height: 60px;
+  }
 }
 .channel__info {
   float: right;
@@ -358,6 +375,11 @@
   padding-right: 20px;
   color: white;
   font-size: calc-rem(10px);
+  @include breakpoint(large) {
+    height: 60px;
+    line-height: 60px;
+    font-size: calc-rem(15px);
+  }
 }
 .dp-footer__link {
   float: right;
@@ -368,6 +390,12 @@
   font-size:calc-rem(12px);
   @include breakpoint(mobile) {
     display: none;
+  }
+  @include breakpoint(large) {
+    font-size:calc-rem(14px);
+  }
+  &:hover {
+    opacity: 0.5;
   }
 }
 
