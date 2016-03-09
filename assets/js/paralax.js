@@ -29,12 +29,9 @@ $(function(){
         $($text_container).removeClass("active");
         $($text_container[index]).addClass("active");
         $($text_container[index-1]).animate({"opacity":"1"},0);
-        $($text_container[index-1]).find("h2").animate({"opacity":"0"},{ queue: false, duration: 300})
-                                              .animate({"top":"-30px"},300);
-        $($text_container[index-1]).find("p").animate({"opacity":"0"},{ queue: false, duration: 300})
-                                             .animate({"top":"-30px"},300);
-        $($text_container[index-1]).find(".dp-buttons").animate({"opacity":"0"},{ queue: false, duration: 500})
-                                             .animate({"top":"-30px"},300);
+        $($text_container[index-1]).find("h2").animate({"opacity":"0","top":"-30px"},300);
+        $($text_container[index-1]).find("p").animate({"opacity":"0","top":"-30px"},300);
+        $($text_container[index-1]).find(".dp-buttons").animate({"opacity":"0","top":"-30px"},300);
         $($text_container[index]).find("h2").delay(200).animate({"opacity":"1","top":"0px"},500);
         $($text_container[index]).find("p").delay(500).animate({"opacity":"1","top":"0px"},500);
         $($text_container[index]).find(".dp-buttons").delay(750).animate({"opacity":"1","top":"0px"},500);
@@ -59,6 +56,7 @@ $(function(){
         $($screen_image[index-1]).delay(900).animate({"top":"102%"},500);
         $($channel[index-1]).animate({"top":"-30px","opacity":'0'},500);
         $($channel[index-2]).animate({"top":"0px","opacity":'1'},500);
+        console.log(index,nextIndex);
       }
     }
   });
