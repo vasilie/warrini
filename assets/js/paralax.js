@@ -9,7 +9,7 @@ $(function(){
     scrollingSpeed: 1500,
     loopBottom: false,
     loopTop: false,
-     easing: 'easeInOutCubic',
+    easing: 'easeInOutCubic',
     afterRender: function(){
       $text_container = $(".text-slide");
       $screen_image = $(".screen-container").find("img");
