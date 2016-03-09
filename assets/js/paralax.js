@@ -60,6 +60,9 @@ $(function(){
       }
     }
   });
+  $(".dp-footer-arrow").click(function(){
+    $.fn.fullpage.moveSectionDown();
+  });
 });
 $(window).resize(function(){
   var height = $(window).height();
