@@ -643,6 +643,9 @@ p {
 .about__text--small-margin {
   margin-top: 20px; }
 
+.dp-body {
+  background: #31abaa; }
+
 .dp-header {
   position: fixed;
   width: 100%;
@@ -664,6 +667,9 @@ p {
 .scroll-container {
   height: 100%;
   position: relative; }
+  @media (max-width: 1024px) {
+    .scroll-container {
+      display: none; } }
 
 .scroll__section {
   height: 6000px !important; }
@@ -682,7 +688,7 @@ p {
 
 .scroll__section--four {
   background: #fff;
-  background: linear-gradient(to bottom, #4fd0ea 0, #fff 100%); }
+  background: linear-gradient(to bottom, #E7E7E9 0, #fff 100%); }
 
 .top-elements__container {
   height: 900px;
@@ -706,6 +712,9 @@ p {
   position: fixed;
   opacity: 1;
   z-index: 9; }
+  @media (max-width: 1024px) {
+    .joe-page {
+      display: none; } }
 
 .joe-typo {
   height: 66%;
@@ -746,34 +755,62 @@ p {
   width: 100%;
   max-width: 620px;
   margin: 0 auto; }
+  @media (max-width: 1024px) {
+    .content-wrapper {
+      width: 40%;
+      max-width: 100%; } }
 
 .device-container {
   float: right;
   position: relative; }
   .device-container img {
     width: 226px; }
+  @media (max-width: 1024px) {
+    .device-container {
+      width: 100%; }
+      .device-container img {
+        width: 101%; } }
+
+.screen-container {
+  position: absolute;
+  width: 146px;
+  height: 258px;
+  top: 41px;
+  left: 65px;
+  overflow: hidden; }
+  .screen-container img {
+    width: 100%;
+    position: absolute;
+    top: 100%; }
+  .screen-container > img:nth-child(1) {
+    z-index: 1; }
+  .screen-container > img:nth-child(2) {
+    z-index: 2; }
+  .screen-container > img:nth-child(3) {
+    z-index: 3; }
+  .screen-container > img:nth-child(4) {
+    z-index: 4; }
+  @media (max-width: 1024px) {
+    .screen-container {
+      width: 65%;
+      height: 67%;
+      top: 11%;
+      left: 29%; }
+      .screen-container img {
+        width: 100%; } }
 
 .text-slide {
   float: left;
   text-align: right;
   direction: rtl;
   color: white;
-  -webkit-transition: all 1000ms;
-  -o-transition: all 1000ms;
-  -ms-transition: all 1000ms;
-  transition: all 1000ms;
   position: absolute; }
+  @media (max-width: 1024px) {
+    .text-slide p, .text-slide .dp-buttons {
+      display: none; } }
 
-.text-slide--first {
-  opacity: 1; }
-
-.text-slide--second {
-  opacity: 0;
-  color: #333; }
-  .text-slide--second h2, .text-slide--second p, .text-slide--second .dp-buttons {
-    top: 30px;
-    opacity: 0;
-    position: relative; }
+.text-slide--white h2, .text-slide--white p {
+  color: white; }
 
 .dp-buttons {
   margin-top: 36px;
@@ -808,7 +845,8 @@ p {
 .text-slide {
   opacity: 0; }
   .text-slide.active {
-    opacity: 1; }
+    opacity: 1;
+    z-index: 100; }
   .text-slide h2, .text-slide p, .text-slide .dp-buttons {
     opacity: 0;
     top: 30px; }
@@ -823,6 +861,9 @@ p {
   height: 40px;
   line-height: 40px;
   z-index: 100; }
+  @media (max-width: 1024px) {
+    .db-footer {
+      text-align: center; } }
 
 .channel__wrapper {
   float: right;
@@ -830,6 +871,9 @@ p {
   height: 40px;
   overflow: hidden;
   position: relative; }
+  @media (max-width: 1024px) {
+    .channel__wrapper {
+      display: none; } }
 
 .channel {
   position: absolute;
@@ -856,6 +900,11 @@ p {
   color: white;
   font-size: 13px;
   font-family: "Roboto", Helvetica, Arial, sans-serif; }
+  @media (max-width: 1024px) {
+    .db-footer__copyright {
+      width: 100%;
+      text-align: center;
+      font-size: 0.625rem; } }
 
 .db-footer__link {
   float: right;
@@ -864,32 +913,17 @@ p {
   color: white;
   font-family: "Roboto", Helvetica, Arial, sans-serif;
   font-size: 12px; }
-
-.screen-container {
-  position: absolute;
-  width: 146px;
-  height: 258px;
-  top: 41px;
-  left: 65px;
-  overflow: hidden; }
-  .screen-container img {
-    width: 100%;
-    position: absolute;
-    top: 100%; }
-  .screen-container > img:nth-child(1) {
-    z-index: 1; }
-  .screen-container > img:nth-child(2) {
-    z-index: 2; }
-  .screen-container > img:nth-child(3) {
-    z-index: 3; }
-  .screen-container > img:nth-child(4) {
-    z-index: 4; }
+  @media (max-width: 1024px) {
+    .db-footer__link {
+      float: none;
+      margin-top: 20px;
+      margin: 0 10px;
+      font-size: 0.625rem; } }
 
 .mask {
   position: fixed;
   bottom: 0;
   width: auto;
-  height: 40%;
   z-index: 99; }
   .mask img {
     float: left; }
@@ -901,5 +935,18 @@ p {
 .atyab-right {
   right: 0;
   height: 100%; }
+
+.yasmina-shoes {
+  left: 0;
+  height: 90%; }
+
+.yasmina-make-up {
+  right: 0;
+  height: 70%; }
+
+.yasmina-logo-big {
+  height: 20%;
+  bottom: 20%;
+  left: 20%; }
 
 /*# sourceMappingURL=main.css.map */

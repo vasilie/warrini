@@ -1,3 +1,6 @@
+.dp-body {
+  background:#31abaa;
+}
 .dp-header {
   position: fixed;
   width: 100%;
@@ -19,6 +22,9 @@
 .scroll-container {
   height:100%;
   position: relative;
+  @include breakpoint(mobile){
+    display: none;
+  }
 }
 .scroll__section {
   height:6000px !important;
@@ -37,7 +43,7 @@
 }
 .scroll__section--four {
   background:  #fff;
-  background: linear-gradient(to bottom,#4fd0ea 0,#fff 100%);
+  background: linear-gradient(to bottom,#E7E7E9 0,#fff 100%);
 }
 .top-elements__container {
   height: 900px;
@@ -61,6 +67,9 @@
   position: fixed;
   opacity: 1;
   z-index: 9;
+  @include breakpoint(mobile){
+    display: none;
+  }
 }
 .joe-typo {
   height: 66%;
@@ -101,6 +110,10 @@
   width: 100%;
   max-width: 620px;
   margin: 0 auto;
+  @include breakpoint(mobile) {
+    width: 40%;
+    max-width: 100%;
+  }
 }
 .device-container {
   float: right;
@@ -108,26 +121,62 @@
   img {
     width: 226px;
   }
+  @include breakpoint(mobile) {
+    width: 100%;
+    img {
+      width: 101%;
+    }
+  }
 }
-
+.screen-container {
+  position: absolute;
+  width: 146px;
+  height: 258px;
+  top: 41px;
+  left: 65px;
+  overflow: hidden;
+  img {
+    width: 100%;
+    position: absolute;
+    top:100%;
+  }
+  &>img:nth-child(1){
+    z-index: 1;
+  }
+  &>img:nth-child(2){
+    z-index: 2;
+  }
+  &>img:nth-child(3){
+    z-index: 3;
+  }
+  &>img:nth-child(4){
+    z-index: 4;
+  }
+  @include breakpoint(mobile) {
+    width: 65%;
+    height: 67%;
+    top: 11%;
+    left: 29%;
+    img {
+      width: 100%;
+    }
+  }
+}
 .text-slide {
   float: left;
   text-align: right;
   direction: rtl;
   color:white;
-  @include transitionFor(all 1000ms);
   position: absolute;
+  @include breakpoint(mobile){
+    p, .dp-buttons {
+      display: none;
+    }
+  }
 }
-.text-slide--first {
-  opacity: 1;
-}
-.text-slide--second {
-  opacity: 0;
-  color:#333;
-  h2,p, .dp-buttons {
-    top:30px;
-    opacity: 0;
-    position: relative;
+.text-slide--white {
+  h2, p {
+    color: white;
   }
 }
 .dp-buttons {
@@ -166,6 +215,7 @@
 
   &.active {
     opacity: 1;
+    z-index: 100;
   }
   h2, p, .dp-buttons {
     opacity: 0;
@@ -182,6 +232,9 @@
   height: 40px;
   line-height: 40px;
   z-index: 100;
+  @include breakpoint(mobile) {
+    text-align: center;
+  }
 }
 .channel__wrapper {
   float:right;
@@ -189,6 +242,9 @@
   height: 40px;
   overflow: hidden;
   position: relative;
+  @include breakpoint(mobile) {
+    display: none;
+  }
 }
 .channel {
   position: absolute;
@@ -216,6 +272,11 @@
   color:white;
   font-size: 13px;
   font-family: $text__family--Roboto;
+  @include breakpoint(mobile) {
+    width: 100%;
+    text-align: center;
+    font-size: calc-rem(10px);
+  }
 
 }
 .db-footer__link {
@@ -225,37 +286,18 @@
   color:white;
   font-family: $text__family--Roboto;
   font-size:12px;
-}
-.screen-container {
-  position: absolute;
-  width: 146px;
-  height: 258px;
-  top: 41px;
-  left: 65px;
-  overflow: hidden;
-  img {
-    width: 100%;
-    position: absolute;
-    top:100%;
-  }
-  &>img:nth-child(1){
-    z-index: 1;
-  }
-  &>img:nth-child(2){
-    z-index: 2;
-  }
-  &>img:nth-child(3){
-    z-index: 3;
-  }
-  &>img:nth-child(4){
-    z-index: 4;
+  @include breakpoint(mobile) {
+    float: none;
+    margin-top:20px;
+    margin: 0 10px;
+    font-size: calc-rem(10px);
   }
 }
+
 .mask {
   position: fixed;
   bottom: 0;
   width:auto;
-  height: 40%;
   z-index: 99;
   img{
     float: left;
@@ -268,4 +310,17 @@
 .atyab-right {
   right:0;
   height: 100%;
+}
+.yasmina-shoes {
+  left:0;
+  height: 90%;
+}
+.yasmina-make-up {
+  right:0;
+  height: 70%;
+}
+.yasmina-logo-big {
+  height: 20%;
+  bottom: 20%;
+  left: 20%;
 }
