@@ -63,3 +63,7 @@ $(function(){
     }
   });
 });
+$(window).resize(function(){
+  var height = $(window).height();
+  $(".top-elements__container").css({"height":height+'px'});
+});

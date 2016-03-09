@@ -11,15 +11,18 @@
     top: 20px;
     text-align: center;
   }
+  @include breakpoint(iphone4) {
+    top: 10px;
+  }
 }
 .dp-header__wrapper {
   width: 100%;
-  max-width: 820px;
-  padding: 0 30px;
+  max-width: 1400px;
+  padding: 0 200px;
   height: 100%;
   margin: 0 auto;
-  @include breakpoint(large){
-    max-width: 1600px;
+  @include breakpoint(mobile) {
+    padding: 0;
   }
 }
 .dp-header__logo {
@@ -107,6 +110,7 @@
 .mother-background {
   height: 100%;
   left:0;
+  opacity: 0.3;
 }
 .fixed-content {
   height: 100%;
@@ -150,6 +154,9 @@
     img {
       width: 339px;
     }
+  }
+  @include breakpoint(iphone4) {
+    margin-top:56px;
   }
 }
 .screen-container {
@@ -230,18 +237,18 @@
   position: relative;
   color:#333;
   @include breakpoint(large) {
-    font-size: 30px;
-    line-height: 42px;
+    font-size: calc-rem(30px);
+    line-height: calc-rem(42px);
   }
 }
 .static-content__text {
-  line-height: 25px;
-  font-size: 11px;
+  line-height: calc-rem(25px);
+  font-size: calc-rem(11px);
   color:#333;
   position: relative;
   @include breakpoint(large) {
-    font-size: 16px;
-    line-height: 32px;
+    font-size: calc-rem(16px);
+    line-height: calc-rem(32px);
   }
 }
 .text-container {
@@ -280,41 +287,50 @@
     text-align: center;
     bottom: 60px;
   }
+  @include breakpoint(iphone4) {
+    bottom: 20px;
+  }
 }
 .dp-footer-arrow {
   position: absolute;
   height: 70%;
   margin-top: 7px;
+  left: 49%;
   @include breakpoint(mobile){
     display: none;
   }
 }
-.dp-copyright {
+.dp-prefooter {
   position: fixed;
   bottom: 50px;
   width: 100%;
   height: 40px;
-  line-height: 40px;
+  line-height: calc-rem(40px);
   z-index: 100;
   @include breakpoint(mobile) {
     text-align: center;
     bottom: 0px;
   }
+  @include breakpoint(iphone4) {
+    display: none;
+  }
 }
-.dp-copyright-text {
-  max-width: 1000px;
+.dp-prefooter-text {
+  max-width: 1400px;
   margin:0 auto;
+  padding:0 200px;
   color:white;
-  font-size: 12px;
+  font-size: calc-rem(12px);
   font-family: $text__family--Roboto;
   @include breakpoint(mobile) {
     color: rgba(255, 255, 255, 0.5);
     font-size: calc-rem(10px);
+    padding: 0;
   }
 }
 .channel__wrapper {
   float:right;
-  width: 150px;
+  width: 180px;
   height: 40px;
   overflow: hidden;
   position: relative;
@@ -338,10 +354,10 @@
 }
 .channel__info {
   float: right;
-  line-height: 40px;
+  line-height: calc-rem(40px);
   padding-right: 20px;
   color: white;
-  font-size: 10px;
+  font-size: calc-rem(10px);
 }
 .dp-footer__link {
   float: right;
@@ -349,7 +365,7 @@
   margin: 0 20px;
   color:white;
   font-family: $text__family--Roboto;
-  font-size:12px;
+  font-size:calc-rem(12px);
   @include breakpoint(mobile) {
     display: none;
   }
