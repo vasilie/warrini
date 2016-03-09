@@ -1,9 +1,16 @@
+.dp-body {
+  background:#31abaa;
+}
 .dp-header {
   position: fixed;
   width: 100%;
   height: 40px;
   top: 119px;
   z-index: 99;
+  @include breakpoint(mobile){
+    top: 20px;
+    text-align: center;
+  }
 }
 .dp-header__wrapper {
   width: 100%;
@@ -11,14 +18,27 @@
   padding: 0 30px;
   height: 100%;
   margin: 0 auto;
+  @include breakpoint(large){
+    max-width: 1600px;
+  }
 }
 .dp-header__logo {
   float: right;
   width: 98px;
+  @include breakpoint(large){
+    width: 150px;
+  }
+  @include breakpoint(mobile) {
+    float:none;
+    width: 90px;
+  }
 }
 .scroll-container {
   height:100%;
   position: relative;
+  @include breakpoint(mobile){
+    display: none;
+  }
 }
 .scroll__section {
   height:6000px !important;
@@ -37,7 +57,7 @@
 }
 .scroll__section--four {
   background:  #fff;
-  background: linear-gradient(to bottom,#4fd0ea 0,#fff 100%);
+  background: linear-gradient(to bottom,#E7E7E9 0,#fff 100%);
 }
 .top-elements__container {
   height: 900px;
@@ -61,6 +81,9 @@
   position: fixed;
   opacity: 1;
   z-index: 9;
+  @include breakpoint(mobile){
+    display: none;
+  }
 }
 .joe-typo {
   height: 66%;
@@ -69,7 +92,7 @@
 }
 .joe-accesories {
   right: 0;
-  height: 100%;
+  height: 118%;
 }
 .watch {
   bottom: 31%;
@@ -101,6 +124,13 @@
   width: 100%;
   max-width: 620px;
   margin: 0 auto;
+  @include breakpoint(mobile) {
+    max-width: 100%;
+    width: 68%;
+  }
+  @include breakpoint(large) {
+    max-width: 930px;
+  }
 }
 .device-container {
   float: right;
@@ -108,123 +138,19 @@
   img {
     width: 226px;
   }
-}
-
-.text-slide {
-  float: left;
-  text-align: right;
-  direction: rtl;
-  color:white;
-  @include transitionFor(all 1000ms);
-  position: absolute;
-}
-.text-slide--first {
-  opacity: 1;
-}
-.text-slide--second {
-  opacity: 0;
-  color:#333;
-  h2,p, .dp-buttons {
-    top:30px;
-    opacity: 0;
-    position: relative;
+  @include breakpoint(mobile) {
+    width: 81%;
+    margin-right: 19%;
+    margin-top: 50px;
+    img {
+      width: 101%;
+    }
   }
-}
-.dp-buttons {
-  margin-top: 36px;
-  position: relative;
-}
-.dp-buttons img {
-  height: 35px;
-  margin:0 5px;
-}
-.dp-buttons img:first-child {
-  margin-right: 0;
-}
-.static-content__heading {
-  font-size: 19px;
-  margin-bottom: 26px;
-  position: relative;
-  color:#333;
-}
-.static-content__text {
-  line-height: 25px;
-  font-size: 11px;
-  color:#333;
-  position: relative;
-}
-.text-container {
-  position: relative;
-  margin: 0px 16px;
-  float: right;
-  width: 270px;
-  margin-top: 75px;
-
-}
-.text-slide {
-  opacity: 0;
-
-  &.active {
-    opacity: 1;
+  @include breakpoint(large) {
+    img {
+      width: 339px;
+    }
   }
-  h2, p, .dp-buttons {
-    opacity: 0;
-    top:30px;
-  }
-}
-.db-footer {
-  width: 100%;
-  position: fixed;
-  bottom: 50px;
-  max-width: 1200px;
-  padding: 0 50px;
-  right: 0;
-  height: 40px;
-  line-height: 40px;
-  z-index: 100;
-}
-.channel__wrapper {
-  float:right;
-  width: 150px;
-  height: 40px;
-  overflow: hidden;
-  position: relative;
-}
-.channel {
-  position: absolute;
-  top:-30px;
-  opacity: 0;
-  right:0;
-  &.active {
-    opacity: 1;
-    top:0;
-  }
-}
-.channel__ico {
-  float:right;
-  height: 40px;
-}
-.channel__info {
-  float: right;
-  line-height: 40px;
-  padding-right: 20px;
-  color: white;
-  font-size: 10px;
-}
-.db-footer__copyright {
-  float: left;
-  color:white;
-  font-size: 13px;
-  font-family: $text__family--Roboto;
-
-}
-.db-footer__link {
-  float: right;
-  text-decoration: none;
-  margin: 0 20px;
-  color:white;
-  font-family: $text__family--Roboto;
-  font-size:12px;
 }
 .screen-container {
   position: absolute;
@@ -250,15 +176,195 @@
   &>img:nth-child(4){
     z-index: 4;
   }
+  @include breakpoint(mobile) {
+    width: 65%;
+    height: 67%;
+    top: 11%;
+    left: 29%;
+    img {
+      width: 100%;
+    }
+  }
+  @include breakpoint(large) {
+    width: 219px;
+    height: 379.5px;
+    top: 60.75px;
+    left: 97.5px;
+  }
 }
+.text-slide {
+  float: left;
+  text-align: right;
+  direction: rtl;
+  color:white;
+  position: absolute;
+  @include breakpoint(mobile){
+    h2,p, .dp-buttons {
+      display: none;
+    }
+  }
+}
+.text-slide--white {
+  h2, p {
+    color: white;
+  }
+}
+.dp-buttons {
+  margin-top: 36px;
+  position: relative;
+}
+.dp-buttons img {
+  height: 35px;
+  margin:0 10px;
+  float: right;
+  @include breakpoint(large) {
+    height:50px;
+  }
+}
+.dp-buttons img:first-child {
+  margin-right: 0;
+}
+.static-content__heading {
+  font-size: 19px;
+  margin-bottom: 26px;
+  position: relative;
+  color:#333;
+  @include breakpoint(large) {
+    font-size: 30px;
+    line-height: 42px;
+  }
+}
+.static-content__text {
+  line-height: 25px;
+  font-size: 11px;
+  color:#333;
+  position: relative;
+  @include breakpoint(large) {
+    font-size: 16px;
+    line-height: 32px;
+  }
+}
+.text-container {
+  position: relative;
+  margin: 0px 16px;
+  float: right;
+  width: 270px;
+  margin-top: 75px;
+  @include breakpoint(large) {
+    width: 405px;
+  }
+}
+.text-slide {
+  opacity: 0;
+
+  &.active {
+    opacity: 1;
+    z-index: 100;
+  }
+  h2, p, .dp-buttons {
+    opacity: 0;
+    top:30px;
+  }
+}
+.dp-footer {
+  width: 100%;
+  position: fixed;
+  bottom: 50px;
+  text-align: center;
+  padding: 0 50px;
+  right: 0;
+  height: 40px;
+  line-height: 40px;
+  z-index: 100;
+  @include breakpoint(mobile) {
+    text-align: center;
+    bottom: 60px;
+  }
+}
+.dp-footer-arrow {
+  position: absolute;
+  height: 70%;
+  margin-top: 7px;
+  @include breakpoint(mobile){
+    display: none;
+  }
+}
+.dp-copyright {
+  position: fixed;
+  bottom: 50px;
+  width: 100%;
+  height: 40px;
+  line-height: 40px;
+  z-index: 100;
+  @include breakpoint(mobile) {
+    text-align: center;
+    bottom: 0px;
+  }
+}
+.dp-copyright-text {
+  max-width: 1000px;
+  margin:0 auto;
+  color:white;
+  font-size: 12px;
+  font-family: $text__family--Roboto;
+  @include breakpoint(mobile) {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: calc-rem(10px);
+  }
+}
+.channel__wrapper {
+  float:right;
+  width: 150px;
+  height: 40px;
+  overflow: hidden;
+  position: relative;
+  @include breakpoint(mobile) {
+    display: none;
+  }
+}
+.channel {
+  position: absolute;
+  top:-30px;
+  opacity: 0;
+  right:0;
+  &.active {
+    opacity: 1;
+    top:0;
+  }
+}
+.channel__ico {
+  float:right;
+  height: 40px;
+}
+.channel__info {
+  float: right;
+  line-height: 40px;
+  padding-right: 20px;
+  color: white;
+  font-size: 10px;
+}
+.dp-footer__link {
+  float: right;
+  text-decoration: none;
+  margin: 0 20px;
+  color:white;
+  font-family: $text__family--Roboto;
+  font-size:12px;
+  @include breakpoint(mobile) {
+    display: none;
+  }
+}
+
 .mask {
   position: fixed;
   bottom: 0;
   width:auto;
-  height: 40%;
   z-index: 99;
   img{
     float: left;
+  }
+  @include breakpoint(mobile) {
+    display: none;
   }
 }
 .atyab-left {
@@ -268,4 +374,31 @@
 .atyab-right {
   right:0;
   height: 100%;
+}
+.yasmina-shoes {
+  height: 57%;
+  top: 19%;
+}
+.yasmina-make-up {
+  height: 106%;
+  top: -14%;
+  right:0;
+}
+.yasmina-logo-wrapper {
+  position: absolute;
+  height: 20%;
+  bottom: 18%;
+  width: 100%;
+  text-align: center;
+}
+.yasmina-logo-big {
+  height: 100%;
+  position:static;
+}
+.download-button--mobile {
+  width: 200px;
+  display: none;
+  @include breakpoint(mobile){
+    display: inline;
+  }
 }

@@ -1,88 +1,161 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<title>Warrini</title>
-	<link rel="stylesheet" href="static/css/main.css">
+  <meta charset="UTF-8">
+  <title>Warrini Second Page</title>
+  <link rel="stylesheet" href="static/css/main.css">
+  <link rel="stylesheet" type="text/css" href="vendor/css/jquery.fullPage.css" />
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-	<script src="vendor/js/jquery.cookie.js"></script>
-	<script src="assets/js/lightbox.js"></script>
-	<link rel="shortcut icon" type="image/x-icon" href="assets/img/warrini-favicon.ico">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src='vendor/js/jquery.slimscroll.min.js'></script>
+  <script src="vendor/js/jquery-ui.min.js"></script>
+  <script src="vendor/js/jquery.fullPage.js"></script>
+  <script src="vendor/js/velocity.min.js"></script>
+  <script src="assets/js/paralax.js"></script>
 </head>
-<body>
-	<!-- LightBox -->
-	<div class="lightbox__container">
-		<div class="lightbox__mask"></div>
-		<div class="lightbox">
-			<div class="lightbox__close" onclick='hideLightBox()'></div>
-			<div class="lightbox__image">
-				<img src="assets/img/lightbox/lightbox-image0.png" alt="" class='active'>
-				<img src="assets/img/lightbox/lightbox-image1.png" alt="" >
-				<img src="assets/img/lightbox/lightbox-image2.png" alt="" >
-			</div>
-			<div class="lightbox__content">
-				<div class="lightbox__logo">
-					<img src='assets/img/warrini-logo-large.png'></img>
-				</div>
-				<h1>Sign up for Our Newsletter</h1>
-				<p>ل تبحثون عن حيل ذكية تسهّل حياتبعون آخر الصيحات ولكن لا تعرفون إن كانت فعلاً تستحق كلّ </p>
-				<div class="lightbox__form">
-					<form action="">
-						<input type="text" class='lightbox__email' placeholder='E-mail adress' name='lightbox-email'>
-						<div class='lightbox__button'>Submit</div>
-					</form>
-				</div>
-				<div class="lightbox__footer">
-					<p>Privacy</p>
-				</div>
-			</div>
-		</div>
-	</div>
-	<!-- Lightbox end -->
-	<div class="page-wrapper clearfix">
-		<div class="container">
-			<div class="container__left">
-				<a href="index.html"><img class="logo" src='assets/img/warrini-logo-large.png'></img></a>
-				<h3 class="info-heading">متوفر على متجر جوجل بلاي</h3>
-				<div class="button__container">
-
-					<a href="#"><img class="button" src='assets/img/app-store-ico.png' ></img></a>
-					<a href="https://play.google.com/store/apps/details?id=com.diwanee.warrini"><img class="button button--last" src='assets/img/gplay-ico.png' ></img></a>
-				</div>
-				<p class='about__text about__text--desk'>هل تبحثون عن حيل ذكية تسهّل حياتكم؟ هل تتتبعون آخر الصيحات ولكن لا تعرفون إن كانت فعلاً تستحق كلّ هذه الضجة؟ هل أنتم مهتمون بعالم التكنولوجيا و المحركات و الأكسسوارات الذكية؟ ماذا عن الماكياج و الموضة والعناية بالشعر و الطبخ؟</p>
-				<p class='about__text about__text--desk about__text--small-margin '>"وريني" هو تطبيق مجاني يتناول أبرز مواضيع اللايف ستايل. كما ويقدم لكم مئات الفيديوهات الترفيهية و التعليمية حول الموضة، الجمال، أجدد الصيحات، أخبار المشاهير بالإضافة إلى التمارين الرياضية و المحركات.
-لا تترددوا وقوموا بتحميل تطبيق "وريني" الآن على جوّالكم و استفيدوا من مختلف الخدمات و النصائح لنمط حياة عصري  و أكثر سهولة.</p>
-
-			</div>
-			<div class="container__right">
-				<div class="phone1__wrap">
-					<img src="assets/img/iphone-6-mockup.png" alt="">
-					<img class='screen' src="assets/img/iphone-screen.png" alt="">
-				</div>
-				<div class="phone2__wrap">
-					<img src="assets/img/samsung-s6-gold.png" alt="">
-					<img class='screen' src="assets/img/android-screen.png" alt="">
-				</div>
-				<p class='about__text about__text--mobile'>هل تبحثون عن حيل ذكية تسهّل حياتكم؟ هل تتتبعون آخر الصيحات ولكن لا تعرفون إن كانت فعلاً تستحق كلّ هذه الضجة؟ هل أنتم مهتمون بعالم التكنولوجيا و المحركات و الأكسسوارات الذكية؟ ماذا عن الماكياج و الموضة والعناية بالشعر و الطبخ؟</p>
-				<p class='about__text about__text--mobile about__text--small-margin '>"وريني" هو تطبيق مجاني يتناول أبرز مواضيع اللايف ستايل. كما ويقدم لكم مئات الفيديوهات الترفيهية و التعليمية حول الموضة، الجمال، أجدد الصيحات، أخبار المشاهير بالإضافة إلى التمارين الرياضية و المحركات.
-لا تترددوا وقوموا بتحميل تطبيق "وريني" الآن على جوّالكم و استفيدوا من مختلف الخدمات و النصائح لنمط حياة عصري  و أكثر سهولة.</p>
-
-			</div>
-		</div>
-	</div>
-	<div class="footer">
-		<div class="footer__wrap">
-			<a href="http://www.diwanee.com"><img class="logo--small" src='assets/img/diwanee-logo.png'></img></a>
-			<div class="footer-nav__wrap">
-				<div class="g-plus-logo"></div>
-				<ul class="footer-nav">
-					<li class="footer-nav__item"><a href=""> النسخة الكاملة </a></li>
-					<li class="footer-nav__item"><a href="private-policy.html"> سياسة الخصوصية</a></li>
-					<li class="footer-nav__item footer-nav__item--last"><a href="about.html"> حول</a></li>
-				</ul>
-			</div>
-		</div>
-	</div>
+<body class='dp-body'>
+  <div class="mask">
+    <img src="assets/img/transparent-over.png" alt="" >
+  </div>
+  <div class="dp-header">
+    <div class="dp-header__wrapper">
+      <a href="/">
+        <img src="assets/img/warrini-logo-small.png" alt="" class="dp-header__logo">
+      </a>
+    </div>
+  </div>
+  <img class="top-element joe-page" src='assets/img/joe-page/joe-page.png'></img>
+  <div class="fixed-content">
+    <div class="content">
+      <div class="content-wrapper">
+        <div class="device-container">
+          <img src='assets/img/joe-page/mobile-with-shadow.png'></img>
+          <div class="screen-container">
+            <img style='top:0' src='assets/img/joe-page/joe-screen.png'></img>
+            <img src='assets/img/3a2ilati/3a2ilati-screen.png'></img>
+            <img src='assets/img/atyabtabkha/atyabtabkha-screen.png'></img>
+            <img src='assets/img/iphone-screen.png'></img>
+          </div>
+        </div>
+        <div class="text-container">
+          <div class="text-slide active text-slide--white">
+            <h2 class="static-content__heading">ل تبحثون عن حيل ذكية تس</h2>
+            <p class="static-content__text">هل تبحثون عن حيل ذكية تسهّل حياتكم؟ هل تتتبعون آخر الصيحات ولكن لا تعرفون إن كانت فعلاً تستحق كلّ هذه الضجة؟ج و الموضة والعناية بالشعر و الطبخ؟</p>
+            <div class="dp-buttons">
+              <a href="https://itunes.apple.com/us/app/warrini/id1067820116">
+                <img src="assets/img/app-store-ico.png" alt="">
+              </a>
+              <a href="https://play.google.com/store/apps/details?id=com.diwanee.warrini">
+                <img src="assets/img/gplay-ico.png" alt="">
+              </a>
+            </div>
+          </div>
+          <div class="text-slide">
+            <h2 class="static-content__heading">الإلتزام بالقوانين وتطبيق القانون</h2>
+            <p class="static-content__text">ن بعض الأطراف الثالثة الموثوقة لأداء الوظتغيير أو حذف الائف وتزويدنا بالخدمات ومنها، على تغيير أو حذف السبيل ا</p>
+            <div class="dp-buttons">
+              <a href="https://itunes.apple.com/us/app/warrini/id1067820116">
+                <img src="assets/img/app-store-ico.png" alt="">
+              </a>
+              <a href="https://play.google.com/store/apps/details?id=com.diwanee.warrini">
+                <img src="assets/img/gplay-ico.png" alt="">
+              </a>
+            </div>
+          </div>
+          <div class="text-slide">
+            <h2 class="static-content__heading">الإلتزام بالقوانين وتطبيق القانون</h2>
+            <p class="static-content__text">ن بعض الأطراف الثالثة الموثوقة لأداء الوظتغيير أو حذف الائف وتزويدنا بالخدمات ومنها، على تغيير أو حذف السبيل ا</p>
+            <div class="dp-buttons">
+              <a href="https://itunes.apple.com/us/app/warrini/id1067820116">
+                <img src="assets/img/app-store-ico.png" alt="">
+              </a>
+              <a href="https://play.google.com/store/apps/details?id=com.diwanee.warrini">
+                <img src="assets/img/gplay-ico.png" alt="">
+              </a>
+            </div>
+          </div>
+          <div class="text-slide">
+            <h2 class="static-content__heading">الإلتزام بالقوانين وتطبيق القانون</h2>
+            <p class="static-content__text">ن بعض الأطراف الثالثة الموثوقة لأداء الوظتغيير أو حذف الائف وتزويدنا بالخدمات ومنها، على تغيير أو حذف السبيل ا</p>
+            <div class="dp-buttons">
+              <a href="https://itunes.apple.com/us/app/warrini/id1067820116">
+                <img src="assets/img/app-store-ico.png" alt="">
+              </a>
+              <a href="https://play.google.com/store/apps/details?id=com.diwanee.warrini">
+                <img src="assets/img/gplay-ico.png" alt="">
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id='scroll-container' class="scroll-container">
+    <section class=' scroll__section scroll__section--one'>
+      <div class="top-elements__container">
+        <img class="top-element joe-typo" src='assets/img/joe-page/joe-typo.png'></img>
+        <img class="top-element joe-accesories" src='assets/img/joe-page/joe-accesories.png'></img>
+      </div>
+    </section>
+    <section class=' scroll__section scroll__section--two'>
+      <div class="top-elements__container">
+        <img class="top-element mother-background" src='assets/img/3a2ilati/3a2ilati-background.png'></img>
+        <img class="top-element mother" src='assets/img/3a2ilati/3a2ilati.png'></img>
+      </div>
+    </section>
+    <section class=' scroll__section scroll__section--three'>
+      <div class="top-elements__container">
+        <img class="top-element atyab-left" src='assets/img/atyabtabkha/atyab-left.png'></img>
+        <img class="top-element atyab-right" src='assets/img/atyabtabkha/atyab-right.png'></img>
+      </div>
+    </section>
+    <section class=' scroll__section scroll__section--four'>
+      <div class="top-elements__container">
+        <img class="top-element yasmina-shoes" src='assets/img/yasmina/shoes.png'></img>
+        <img class="top-element yasmina-make-up" src='assets/img/yasmina/yasmina-make-up.png'></img>
+        <div class="yasmina-logo-wrapper">
+          <img class="top-element yasmina-logo-big" src='assets/img/yasmina/yasmina-logo.png'></img>
+        </div>
+      </div>
+    </section>
+  </div>
+  <div class="dp-copyright">
+    <p class="dp-copyright-text">
+      Diwanee 2016 All Rights Resereved
+    </p>
+  </div>
+  <div class="dp-footer">
+    <img src='assets/img/button-download.png' class="download-button--mobile"></img>
+    <img src='assets/img/arrow-down.png' class="dp-footer-arrow"> </img>
+    <div class="channel__wrapper">
+        <div class="channel active">
+          <img class="channel__ico" src='assets/img/joe-page/joe-channel-ico.png'></img>
+          <p class="channel__info">
+            ل تبحثون عن
+          </p>
+        </div>
+        <div class="channel">
+          <img class="channel__ico" src='assets/img/3a2ilati/3a2ilati-ico.png'></img>
+          <p class="channel__info">
+            ل تبحثون عن
+          </p>
+        </div>
+        <div class="channel">
+          <img class="channel__ico" src='assets/img/atyabtabkha/at-ico.png'></img>
+          <p class="channel__info">
+            ل تبحثون عن
+          </p>
+        </div>
+        <div class="channel">
+          <img class="channel__ico" src='assets/img/yasmina/yasmina-ico.png'></img>
+          <p class="channel__info">
+            ل تبحثون عن
+          </p>
+        </div>
+    </div>
+    <a class="dp-footer__link" href="/about">About</a>
+    <a class="dp-footer__link" href="/privacy-policy">Privacy</a>
+    <a class="dp-footer__link" href="/wall">Desktop version</a>
+  </div>
 </body>
 </html>
