@@ -36,6 +36,19 @@
     width: 90px;
   }
 }
+.mask {
+  position: fixed;
+  bottom: 0;
+  width:auto;
+  z-index: 99;
+  opacity: 0.7;
+  img{
+    float: left;
+  }
+  @include breakpoint(mobile) {
+    display: none;
+  }
+}
 .scroll-container {
   height:100%;
   position: relative;
@@ -111,6 +124,41 @@
   height: 100%;
   left:0;
   opacity: 0.3;
+}
+.atyab-left {
+  left: -11%;
+  height: 100%;
+}
+.atyab-right {
+  right:0;
+  height: 100%;
+}
+.yasmina-shoes {
+  height: 57%;
+  top: 19%;
+}
+.yasmina-make-up {
+  height: 106%;
+  top: -14%;
+  right:0;
+}
+.yasmina-logo-wrapper {
+  position: absolute;
+  height: 20%;
+  bottom: 18%;
+  width: 100%;
+  text-align: center;
+}
+.yasmina-logo-big {
+  height: 100%;
+  position:static;
+}
+.download-button--mobile {
+  width: 200px;
+  display: none;
+  @include breakpoint(mobile){
+    display: inline;
+  }
 }
 .fixed-content {
   height: 100%;
@@ -273,7 +321,7 @@
     top:30px;
   }
 }
-.dp-footer {
+.dp-channel__container {
   width: 100%;
   position: fixed;
   bottom: 50px;
@@ -300,11 +348,16 @@
   height: 70%;
   margin-top: 7px;
   left: 49%;
+  cursor:pointer;
+  @include transitionFor(all 300ms);
   @include breakpoint(mobile){
     display: none;
   }
+  &:hover {
+    opacity: 0.5;
+  }
 }
-.dp-prefooter {
+.dp-footer {
   position: fixed;
   bottom: 50px;
   width: 100%;
@@ -323,7 +376,7 @@
     line-height: 60px;
   }
 }
-.dp-prefooter-text {
+.dp-footer-wrap {
   max-width: 1400px;
   margin:0 auto;
   padding:0 200px;
@@ -337,6 +390,13 @@
   }
   @include breakpoint(large) {
     font-size: calc-rem(14px);
+  }
+}
+.dp-footer__copyright {
+  float: left;
+  @include breakpoint(mobile) {
+    width: 100%;
+    text-align: center;
   }
 }
 .channel__wrapper {
@@ -388,6 +448,7 @@
   color:white;
   font-family: $text__family--Roboto;
   font-size:calc-rem(12px);
+  @include transitionFor(all 300ms);
   @include breakpoint(mobile) {
     display: none;
   }
@@ -398,51 +459,6 @@
     opacity: 0.5;
   }
 }
-
-.mask {
-  position: fixed;
-  bottom: 0;
-  width:auto;
-  z-index: 99;
-  img{
-    float: left;
-  }
-  @include breakpoint(mobile) {
-    display: none;
-  }
-}
-.atyab-left {
-  left: -11%;
-  height: 100%;
-}
-.atyab-right {
-  right:0;
-  height: 100%;
-}
-.yasmina-shoes {
-  height: 57%;
-  top: 19%;
-}
-.yasmina-make-up {
-  height: 106%;
-  top: -14%;
-  right:0;
-}
-.yasmina-logo-wrapper {
-  position: absolute;
-  height: 20%;
-  bottom: 18%;
-  width: 100%;
-  text-align: center;
-}
-.yasmina-logo-big {
-  height: 100%;
-  position:static;
-}
-.download-button--mobile {
-  width: 200px;
-  display: none;
-  @include breakpoint(mobile){
-    display: inline;
-  }
+.dp-footer__link--last {
+  margin-right: 0;
 }

@@ -681,6 +681,18 @@ p {
       float: none;
       width: 90px; } }
 
+.mask {
+  position: fixed;
+  bottom: 0;
+  width: auto;
+  z-index: 99;
+  opacity: 0.7; }
+  .mask img {
+    float: left; }
+  @media (max-width: 1024px) {
+    .mask {
+      display: none; } }
+
 .scroll-container {
   height: 100%;
   position: relative; }
@@ -756,6 +768,41 @@ p {
   height: 100%;
   left: 0;
   opacity: 0.3; }
+
+.atyab-left {
+  left: -11%;
+  height: 100%; }
+
+.atyab-right {
+  right: 0;
+  height: 100%; }
+
+.yasmina-shoes {
+  height: 57%;
+  top: 19%; }
+
+.yasmina-make-up {
+  height: 106%;
+  top: -14%;
+  right: 0; }
+
+.yasmina-logo-wrapper {
+  position: absolute;
+  height: 20%;
+  bottom: 18%;
+  width: 100%;
+  text-align: center; }
+
+.yasmina-logo-big {
+  height: 100%;
+  position: static; }
+
+.download-button--mobile {
+  width: 200px;
+  display: none; }
+  @media (max-width: 1024px) {
+    .download-button--mobile {
+      display: inline; } }
 
 .fixed-content {
   height: 100%;
@@ -901,7 +948,7 @@ p {
     opacity: 0;
     top: 30px; }
 
-.dp-footer {
+.dp-channel__container {
   width: 100%;
   position: fixed;
   bottom: 50px;
@@ -912,14 +959,14 @@ p {
   line-height: 40px;
   z-index: 100; }
   @media (max-width: 1024px) {
-    .dp-footer {
+    .dp-channel__container {
       text-align: center;
       bottom: 60px; } }
   @media (min-device-width: 320px) and (max-height: 450px) {
-    .dp-footer {
+    .dp-channel__container {
       bottom: 20px; } }
   @media (min-width: 1980px) {
-    .dp-footer {
+    .dp-channel__container {
       height: 60px;
       line-height: 60px; } }
 
@@ -927,12 +974,19 @@ p {
   position: absolute;
   height: 70%;
   margin-top: 7px;
-  left: 49%; }
+  left: 49%;
+  cursor: pointer;
+  -webkit-transition: all 300ms;
+  -o-transition: all 300ms;
+  -ms-transition: all 300ms;
+  transition: all 300ms; }
   @media (max-width: 1024px) {
     .dp-footer-arrow {
       display: none; } }
+  .dp-footer-arrow:hover {
+    opacity: 0.5; }
 
-.dp-prefooter {
+.dp-footer {
   position: fixed;
   bottom: 50px;
   width: 100%;
@@ -940,18 +994,18 @@ p {
   line-height: 2.5rem;
   z-index: 101; }
   @media (max-width: 1024px) {
-    .dp-prefooter {
+    .dp-footer {
       text-align: center;
       bottom: 0px; } }
   @media (min-device-width: 320px) and (max-height: 450px) {
-    .dp-prefooter {
+    .dp-footer {
       display: none; } }
   @media (min-width: 1980px) {
-    .dp-prefooter {
+    .dp-footer {
       height: 60px;
       line-height: 60px; } }
 
-.dp-prefooter-text {
+.dp-footer-wrap {
   max-width: 1400px;
   margin: 0 auto;
   padding: 0 200px;
@@ -959,13 +1013,20 @@ p {
   font-size: 0.75rem;
   font-family: "Roboto", Helvetica, Arial, sans-serif; }
   @media (max-width: 1024px) {
-    .dp-prefooter-text {
+    .dp-footer-wrap {
       color: rgba(255, 255, 255, 0.5);
       font-size: 0.625rem;
       padding: 0; } }
   @media (min-width: 1980px) {
-    .dp-prefooter-text {
+    .dp-footer-wrap {
       font-size: 0.875rem; } }
+
+.dp-footer__copyright {
+  float: left; }
+  @media (max-width: 1024px) {
+    .dp-footer__copyright {
+      width: 100%;
+      text-align: center; } }
 
 .channel__wrapper {
   float: right;
@@ -1014,7 +1075,11 @@ p {
   margin: 0 20px;
   color: white;
   font-family: "Roboto", Helvetica, Arial, sans-serif;
-  font-size: 0.75rem; }
+  font-size: 0.75rem;
+  -webkit-transition: all 300ms;
+  -o-transition: all 300ms;
+  -ms-transition: all 300ms;
+  transition: all 300ms; }
   @media (max-width: 1024px) {
     .dp-footer__link {
       display: none; } }
@@ -1024,50 +1089,7 @@ p {
   .dp-footer__link:hover {
     opacity: 0.5; }
 
-.mask {
-  position: fixed;
-  bottom: 0;
-  width: auto;
-  z-index: 99; }
-  .mask img {
-    float: left; }
-  @media (max-width: 1024px) {
-    .mask {
-      display: none; } }
-
-.atyab-left {
-  left: -11%;
-  height: 100%; }
-
-.atyab-right {
-  right: 0;
-  height: 100%; }
-
-.yasmina-shoes {
-  height: 57%;
-  top: 19%; }
-
-.yasmina-make-up {
-  height: 106%;
-  top: -14%;
-  right: 0; }
-
-.yasmina-logo-wrapper {
-  position: absolute;
-  height: 20%;
-  bottom: 18%;
-  width: 100%;
-  text-align: center; }
-
-.yasmina-logo-big {
-  height: 100%;
-  position: static; }
-
-.download-button--mobile {
-  width: 200px;
-  display: none; }
-  @media (max-width: 1024px) {
-    .download-button--mobile {
-      display: inline; } }
+.dp-footer__link--last {
+  margin-right: 0; }
 
 /*# sourceMappingURL=main.css.map */
