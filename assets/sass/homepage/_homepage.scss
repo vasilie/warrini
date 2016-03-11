@@ -188,7 +188,7 @@
   float: right;
   position:relative;
   img {
-    width: 226px;
+    width: 276px;
   }
   @include breakpoint(mobile) {
     width: 81%;
@@ -200,7 +200,7 @@
   }
   @include breakpoint(large) {
     img {
-      width: 339px;
+      width: 368px;
     }
   }
   @include breakpoint(iphone4) {
@@ -209,42 +209,57 @@
 }
 .screen-container {
   position: absolute;
-  width: 146px;
-  height: 258px;
-  top: 41px;
-  left: 65px;
+  width: 178px;
+  height: 316px;
+  top: 49px;
+  left: 80px;
   overflow: hidden;
-  img {
+  video {
     width: 100%;
     position: absolute;
     top:100%;
+    min-width: 100%;
+    min-height: 100%;
   }
-  &>img:nth-child(1){
+  &>video:nth-child(1){
     z-index: 1;
   }
-  &>img:nth-child(2){
+  &>video:nth-child(2){
     z-index: 2;
   }
-  &>img:nth-child(3){
+  &>video:nth-child(3){
     z-index: 3;
   }
-  &>img:nth-child(4){
+  &>video:nth-child(4){
     z-index: 4;
   }
   @include breakpoint(mobile) {
-    width: 65%;
-    height: 67%;
-    top: 11%;
+    width: 65.2%;
+    height: 67.05%;
+    top: 10.6%;
     left: 29%;
     img {
+      display: none;
       width: 100%;
     }
   }
   @include breakpoint(large) {
-    width: 219px;
-    height: 386.5px;
-    top: 60.75px;
-    left: 97.5px;
+    width: 238px;
+    height: 420.5px;
+    top: 65.75px;
+    left: 106.5px;
+  }
+}
+.screen-container__video {
+  @include breakpoint(mobile) {
+    display: none;
+    width: 100%;
+  }
+}
+.screen-container__video--mobile {
+  @include breakpoint(mobile) {
+    display: block;
+    width: 100%;
   }
 }
 .text-slide {
@@ -280,7 +295,7 @@
   margin-right: 0;
 }
 .static-content__heading {
-  font-size: 19px;
+  font-size: calc-rem(19px);
   margin-bottom: 26px;
   position: relative;
   color:#333;
@@ -310,8 +325,6 @@
   }
 }
 .text-slide {
-  // opacity: 0;
-
   &.active {
     opacity: 1;
     z-index: 100;
@@ -355,6 +368,10 @@
   }
   &:hover {
     opacity: 0.5;
+  }
+  @include breakpoint(large) {
+    height: 52%;
+    margin-top:15px;
   }
 }
 .dp-footer {
@@ -401,7 +418,7 @@
 }
 .channel__wrapper {
   float:right;
-  width: 180px;
+  width: 300px;
   height: 40px;
   overflow: hidden;
   position: relative;

@@ -12,7 +12,7 @@ $(function(){
     easing: 'easeInOutCubic',
     afterRender: function(){
       $text_container = $(".text-slide");
-      $screen_image = $(".screen-container").find("img");
+      $screen_image = $(".screen-container").find("video");
       $channel = $(".channel");
       var height = $(window).height();
       $(".top-elements__container").css({"height":height+'px'});
