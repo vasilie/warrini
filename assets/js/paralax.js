@@ -35,8 +35,8 @@ $(function(){
         $($text_container[index]).find("h2").delay(200).animate({"opacity":"1","top":"0px"},500);
         $($text_container[index]).find("p").delay(500).animate({"opacity":"1","top":"0px"},500);
         $($text_container[index]).find(".dp-buttons").delay(750).animate({"opacity":"1","top":"0px"},500);
-        $($channel[index-1]).animate({"top":"-30px","opacity":'0'},500);
-        $($channel[index]).animate({"top":"0px","opacity":'1'},500);
+        $($channel[index-1]).animate({"opacity":'0'},700);
+        $($channel[index]).animate({"opacity":'1'},700);
         $($screen_image[index]).delay(900).animate({"top":"0"},500);
       } else if (direction=='up'){
         if (index == 2){
@@ -54,8 +54,8 @@ $(function(){
         $($text_container[index-2]).find("p").delay(500).animate({"opacity":"1","top":"0px"},500);
         $($text_container[index-2]).find(".dp-buttons").delay(700).animate({"opacity":"1","top":"0px"},700);
         $($screen_image[index-1]).delay(900).animate({"top":"102%"},500);
-        $($channel[index-1]).animate({"top":"-30px","opacity":'0'},500);
-        $($channel[index-2]).animate({"top":"0px","opacity":'1'},500);
+        $($channel[index-1]).animate({"opacity":'0'},700);
+        $($channel[index-2]).animate({"opacity":'1'},700);
         console.log(index,nextIndex);
       }
     }

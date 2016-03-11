@@ -1,5 +1,8 @@
 .dp-body {
   background:#31abaa;
+  @include breakpoint(mobile){
+    overflow: scroll !important;
+  }
 }
 .dp-header {
   position: fixed;
@@ -8,7 +11,9 @@
   top: 119px;
   z-index: 99;
   @include breakpoint(mobile){
-    top: 20px;
+    top: 0px;
+    margin-top:20px;
+    position: relative;
     text-align: center;
   }
   @include breakpoint(iphone4) {
@@ -166,19 +171,27 @@
   width:100%;
   display: table;
   z-index: 10;
+  @include breakpoint(mobile){
+    display: block;
+    position: relative;
+    height: auto;
+  }
 }
 .content {
   display: table-cell;
   vertical-align: middle;
   position: relative;
+  @include breakpoint(mobile){
+    display: block;
+  }
 }
 .content-wrapper {
   width: 100%;
-  max-width: 620px;
+  max-width: 700px;
   margin: 0 auto;
   @include breakpoint(mobile) {
     max-width: 100%;
-    width: 68%;
+    width: 100%;
   }
   @include breakpoint(large) {
     max-width: 930px;
@@ -188,12 +201,12 @@
   float: right;
   position:relative;
   img {
-    width: 276px;
+    width: 320px;
   }
   @include breakpoint(mobile) {
     width: 81%;
     margin-right: 19%;
-    margin-top: 50px;
+    margin-top: 25px;
     img {
       width: 101%;
     }
@@ -209,10 +222,10 @@
 }
 .screen-container {
   position: absolute;
-  width: 178px;
-  height: 316px;
-  top: 49px;
-  left: 80px;
+  width: 206px;
+  height: 366px;
+  top: 57px;
+  left: 93px;
   overflow: hidden;
   video {
     width: 100%;
@@ -256,9 +269,9 @@
     width: 100%;
   }
 }
-.screen-container__video--mobile {
+.screen-container__video {
   @include breakpoint(mobile) {
-    display: block;
+    display: none;
     width: 100%;
   }
 }
@@ -284,7 +297,7 @@
   position: relative;
 }
 .dp-buttons img {
-  height: 35px;
+  height: 45px;
   margin:0 10px;
   float: right;
   @include breakpoint(large) {
@@ -295,7 +308,8 @@
   margin-right: 0;
 }
 .static-content__heading {
-  font-size: calc-rem(19px);
+  font-size: calc-rem(28px);
+  line-height: calc-rem(37px);
   margin-bottom: 26px;
   position: relative;
   color:#333;
@@ -306,7 +320,7 @@
 }
 .static-content__text {
   line-height: calc-rem(25px);
-  font-size: calc-rem(11px);
+  font-size: calc-rem(15px);
   color:#333;
   position: relative;
   @include breakpoint(large) {
@@ -318,10 +332,13 @@
   position: relative;
   margin: 0px 16px;
   float: right;
-  width: 270px;
-  margin-top: 75px;
+  width: 340px;
+  margin-top: 100px;
   @include breakpoint(large) {
     width: 405px;
+  }
+  @include breakpoint(mobile) {
+    display:none;
   }
 }
 .text-slide {
@@ -341,8 +358,8 @@
   text-align: center;
   padding: 0 50px;
   right: 0;
-  height: 40px;
-  line-height: 40px;
+  height: calc-rem(60px);
+  line-height: calc-rem(60px);
   z-index: 100;
   @include breakpoint(mobile) {
     text-align: center;
@@ -351,15 +368,12 @@
   @include breakpoint(iphone4) {
     bottom: 20px;
   }
-  @include breakpoint(large) {
-    height: 60px;
-    line-height: 60px;
-  }
+
 }
 .dp-footer-arrow {
   position: absolute;
-  height: 70%;
-  margin-top: 7px;
+  height: 52%;
+  margin-top: 15px;
   left: 49%;
   cursor:pointer;
   @include transitionFor(all 300ms);
@@ -369,28 +383,23 @@
   &:hover {
     opacity: 0.5;
   }
-  @include breakpoint(large) {
-    height: 52%;
-    margin-top:15px;
-  }
 }
 .dp-footer {
   position: fixed;
   bottom: 50px;
   width: 100%;
-  height: 40px;
-  line-height: calc-rem(40px);
+  height: 60px;
+  line-height: calc-rem(60px);
   z-index: 101;
   @include breakpoint(mobile) {
     text-align: center;
     bottom: 0px;
+    position: relative;
+    height: auto;
+    line-height: normal;
   }
   @include breakpoint(iphone4) {
     display: none;
-  }
-  @include breakpoint(large) {
-    height: 60px;
-    line-height: 60px;
   }
 }
 .dp-footer-wrap {
@@ -398,15 +407,12 @@
   margin:0 auto;
   padding:0 200px;
   color:white;
-  font-size: calc-rem(12px);
+  font-size: calc-rem(14px);
   font-family: $text__family--Roboto;
   @include breakpoint(mobile) {
     color: rgba(255, 255, 255, 0.5);
     font-size: calc-rem(10px);
     padding: 0;
-  }
-  @include breakpoint(large) {
-    font-size: calc-rem(14px);
   }
 }
 .dp-footer__copyright {
@@ -414,24 +420,23 @@
   @include breakpoint(mobile) {
     width: 100%;
     text-align: center;
+    margin-top: -23px;
+    margin-bottom: 20px;
+    font-size: calc-rem(12px);
   }
 }
 .channel__wrapper {
   float:right;
   width: 300px;
-  height: 40px;
+  height: 60px;
   overflow: hidden;
   position: relative;
   @include breakpoint(mobile) {
     display: none;
   }
-  @include breakpoint(large) {
-    height: 60px;
-  }
 }
 .channel {
   position: absolute;
-  top:-30px;
   opacity: 0;
   right:0;
   &.active {
@@ -441,22 +446,15 @@
 }
 .channel__ico {
   float:right;
-  height: 40px;
-  @include breakpoint(large) {
-    height: 60px;
-  }
+  height: 60px;
 }
 .channel__info {
   float: right;
-  line-height: calc-rem(40px);
+  line-height: calc-rem(60px);
   padding-right: 20px;
   color: white;
-  font-size: calc-rem(10px);
-  @include breakpoint(large) {
-    height: 60px;
-    line-height: 60px;
-    font-size: calc-rem(15px);
-  }
+  height: calc-rem(60px);
+  font-size: calc-rem(15px);
 }
 .dp-footer__link {
   float: right;
@@ -464,13 +462,10 @@
   margin: 0 20px;
   color:white;
   font-family: $text__family--Roboto;
-  font-size:calc-rem(12px);
+  font-size:calc-rem(14px);
   @include transitionFor(all 300ms);
   @include breakpoint(mobile) {
     display: none;
-  }
-  @include breakpoint(large) {
-    font-size:calc-rem(14px);
   }
   &:hover {
     opacity: 0.5;
@@ -478,4 +473,32 @@
 }
 .dp-footer__link--last {
   margin-right: 0;
+}
+.sub-title--mobile {
+  display: none;
+  @include breakpoint(mobile){
+    text-align: center;
+    line-height: 23px;
+    width: 80%;
+    margin: 0 auto;
+    color: white;
+    margin-top: 10px;
+    font-size: 14px;
+    display: block;
+  }
+}
+.download-button__wrapper {
+  width: 100%;
+  text-align: center;
+  margin-top: 20px;
+  img {
+    height: 50px;
+    width: auto;
+  }
+}
+.screen-container__video--mobile{
+  display: block;
+}
+.download-link {
+  display: inline-block;
 }
