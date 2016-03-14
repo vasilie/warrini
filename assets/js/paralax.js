@@ -20,7 +20,7 @@ $(function(){
       $(".text-slide.active p").delay(250).animate({"opacity":"1","top":"0px"},500);
       $(".text-slide.active .dp-buttons").delay(250).animate({"opacity":"1","top":"0px"},500);
       $(".dp-link__container").delay(250).animate({"opacity":"1","top":"0px"},500);
-      $(".warrini-triangle").delay(250).animate({"opacity":"1","top":"-22%"},500);
+      $(".warrini-triangle").delay(250).animate({"opacity":"1","left":"6%"},500);
     },
     onLeave: function(index, nextIndex, direction){
       if (direction == 'down'){
