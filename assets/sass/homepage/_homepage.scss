@@ -53,7 +53,7 @@
   position: fixed;
   bottom: 0;
   width:auto;
-  z-index: 99;
+  z-index: 10;
   opacity: 0.7;
   img{
     float: left;
@@ -105,7 +105,8 @@
 .warrini-triangle {
   height: 101%;
   left: 6%;
-  top: -22%;
+  top: -24%;
+  opacity: 0;
 }
 .nike-shoes {
   width: 33%;
@@ -316,6 +317,9 @@
   margin-top: 58px;
   position: relative;
 }
+.dp-buttons--first {
+  margin-top: 21px;
+}
 .dp-buttons img {
   height: 45px;
   margin:0 10px;
@@ -400,6 +404,12 @@
   margin-top: 9px;
   left: 49%;
   cursor:pointer;
+    animation: bounce 2500ms  infinite forwards;
+  -webkit-animation: bounce 2500ms  infinite forwards;
+  -moz-animation: bounce 2500ms  infinite forwards;
+  -o-animation: bounce 2500ms  infinite forwards;
+  -webkit-animation-delay: 2s; /* Chrome, Safari, Opera */
+  animation-delay: 2s;
   @include breakpoint(large) {
     height: 52%;
     margin-top: 15px;
@@ -561,4 +571,51 @@
 }
 .download-link {
   display: inline-block;
+}
+@include bounce;
+.dp-link__container {
+  position: relative;
+  margin-top: 28px;
+  overflow: hidden;
+  padding: 25px 0;
+  opacity: 0;
+  top: 30px;
+  border-top: 1px solid #ccc;
+}
+.dp-link__container--mobile {
+  display: none;
+  @include breakpoint(mobile) {
+    display: block;
+    width: 90%;
+    margin:0 auto;
+    opacity: 1;
+    text-align: center;
+    margin-top: 34px;
+    position: static;
+    opacity: 1 !important;
+  }
+  .dp-link__image {
+    position: relative;
+    top: 7px;
+  }
+}
+.dp-link {
+  text-decoration:none;
+  color:#333;
+}
+.dp-link__text, .dp-link__image {
+  float: right;
+  @include breakpoint(mobile) {
+    display: inline;
+    float: none;
+  }
+
+}
+.dp-link__image {
+  margin-left: 20px;
+}
+.dp-link__text {
+  @include breakpoint(mobile){
+    font-size: calc-rem(12px);
+  }
 }
