@@ -23,6 +23,9 @@ $(function(){
     onLeave: function(index, nextIndex, direction){
       if (direction == 'down'){
         if (index == 1){
+          $(".joe-page").delay(500).animate({"opacity":"1","bottom":"0px"},500);
+        }
+        if (index == 2){
           $(".joe-page").animate({"opacity":"0"},{ queue: false, duration: 500})
           .animate({"bottom":"0px"},400);
         }
@@ -40,6 +43,9 @@ $(function(){
         $($screen_image[index]).delay(900).animate({"top":"0"},500);
       } else if (direction=='up'){
         if (index == 2){
+          $(".joe-page").delay(500).animate({"opacity":"0", "bottom":"-30px"},400);
+        }
+        if (index == 3){
           $(".joe-page").delay(500).animate({"opacity":"1", "bottom":"-30px"},400);
         }
         $($text_container).removeClass("active");

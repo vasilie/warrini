@@ -1,5 +1,5 @@
 .dp-body {
-  background:#31abaa;
+  background:#fff;
   @include breakpoint(mobile){
     overflow: scroll !important;
   }
@@ -8,11 +8,12 @@
   position: fixed;
   width: 100%;
   height: 40px;
-  top: 119px;
+  top: 8%;
   z-index: 99;
   @include breakpoint(mobile){
     top: 0px;
     margin-top:20px;
+    height: auto;
     position: relative;
     text-align: center;
   }
@@ -23,7 +24,7 @@
 .dp-header__wrapper {
   width: 100%;
   max-width: 1400px;
-  padding: 0 200px;
+  padding: 0 220px;
   height: 100%;
   margin: 0 auto;
   @include breakpoint(mobile) {
@@ -32,13 +33,20 @@
 }
 .dp-header__logo {
   float: right;
-  width: 98px;
-  @include breakpoint(large){
-    width: 150px;
-  }
+  width: 200px;
+  margin-top:-120px;
   @include breakpoint(mobile) {
+    display: none;
+  }
+}
+.dp-header__logo--mobile {
+  @extend .dp-header__logo;
+  display:none;
+  @include breakpoint(mobile) {
+    margin:0 auto;
+    display:block;
     float:none;
-    width: 90px;
+    width: 40%;
   }
 }
 .mask {
@@ -65,18 +73,25 @@
   height:6000px !important;
 }
 .scroll__section--one {
-  background:  #31abaa;
-  background: linear-gradient(to bottom, #31abaa 0,#FDFDFD 100%);
+  background:  #f7f7f7;
+  background: linear-gradient(to bottom, #f7f7f7 22%, #31abaa 100%)
 }
 .scroll__section--two {
-  background:  #fff;
-  background: linear-gradient(to bottom, #FDFDFD 0, #FAFAFB 100%);
+  background:  #31abaa;
+  background: linear-gradient(to bottom, #31abaa 0,#FDFDFD 100%);
+
 }
 .scroll__section--three {
   background:  #fff;
-  background: linear-gradient(to bottom, #FAFAFB 0, #E7E7E9 100%);
+  background: linear-gradient(to bottom, #FDFDFD 0, #FAFAFB 100%);
+
 }
 .scroll__section--four {
+  background:  #fff;
+  background: linear-gradient(to bottom, #FAFAFB 0, #E7E7E9 100%);
+
+}
+.scroll__section--five {
   background:  #fff;
   background: linear-gradient(to bottom,#E7E7E9 0,#fff 100%);
 }
@@ -86,6 +101,11 @@
 }
 .top-element {
   position: absolute;
+}
+.warrini-triangle {
+  height: 101%;
+  left: 6%;
+  top: -22%;
 }
 .nike-shoes {
   width: 33%;
@@ -100,7 +120,7 @@
   bottom:-30px;
   height:95%;
   position: fixed;
-  opacity: 1;
+  opacity: 0;
   z-index: 9;
   @include breakpoint(mobile){
     display: none;
@@ -204,8 +224,8 @@
     width: 320px;
   }
   @include breakpoint(mobile) {
-    width: 81%;
-    margin-right: 19%;
+    width: 95%;
+    margin-right: 13%;
     margin-top: 25px;
     img {
       width: 101%;
@@ -213,7 +233,7 @@
   }
   @include breakpoint(large) {
     img {
-      width: 368px;
+      width: 400px;
     }
   }
   @include breakpoint(iphone4) {
@@ -257,10 +277,10 @@
     }
   }
   @include breakpoint(large) {
-    width: 238px;
-    height: 420.5px;
-    top: 65.75px;
-    left: 106.5px;
+    width: 260px;
+    height: 456.5px;
+    top: 71.75px;
+    left: 115.5px;
   }
 }
 .screen-container__video {
@@ -293,7 +313,7 @@
   }
 }
 .dp-buttons {
-  margin-top: 36px;
+  margin-top: 58px;
   position: relative;
 }
 .dp-buttons img {
@@ -333,7 +353,7 @@
   margin: 0px 16px;
   float: right;
   width: 340px;
-  margin-top: 100px;
+  margin-top: 217px;
   @include breakpoint(large) {
     width: 405px;
   }
@@ -356,11 +376,16 @@
   position: fixed;
   bottom: 50px;
   text-align: center;
-  padding: 0 50px;
+  padding: 0 35px;
   right: 0;
-  height: calc-rem(60px);
-  line-height: calc-rem(60px);
+  height: calc-rem(40px);
+  line-height: calc-rem(40px);
   z-index: 100;
+  @include breakpoint(large) {
+    height: calc-rem(60px);
+    line-height: calc-rem(60px);
+    padding: 0 50px;
+  }
   @include breakpoint(mobile) {
     text-align: center;
     bottom: 60px;
@@ -368,16 +393,19 @@
   @include breakpoint(iphone4) {
     bottom: 20px;
   }
-
 }
 .dp-footer-arrow {
   position: absolute;
-  height: 52%;
-  margin-top: 15px;
+  height: 60%;
+  margin-top: 9px;
   left: 49%;
   cursor:pointer;
+  @include breakpoint(large) {
+    height: 52%;
+    margin-top: 15px;
+  }
   @include transitionFor(all 300ms);
-  @include breakpoint(mobile){
+  @include breakpoint(mobile) {
     display: none;
   }
   &:hover {
@@ -388,9 +416,13 @@
   position: fixed;
   bottom: 50px;
   width: 100%;
-  height: 60px;
-  line-height: calc-rem(60px);
+  height: 40px;
+  line-height: calc-rem(40px);
   z-index: 101;
+  @include breakpoint(large) {
+    height: 60px;
+    line-height: calc-rem(60px);
+  }
   @include breakpoint(mobile) {
     text-align: center;
     bottom: 0px;
@@ -405,7 +437,7 @@
 .dp-footer-wrap {
   max-width: 1400px;
   margin:0 auto;
-  padding:0 200px;
+  padding:0 220px;
   color:white;
   font-size: calc-rem(14px);
   font-family: $text__family--Roboto;
@@ -417,20 +449,29 @@
 }
 .dp-footer__copyright {
   float: left;
+  font-size:calc-rem(12px);
+  @include breakpoint(large) {
+    font-size:calc-rem(14px);
+  }
   @include breakpoint(mobile) {
     width: 100%;
     text-align: center;
-    margin-top: -23px;
-    margin-bottom: 20px;
     font-size: calc-rem(12px);
+    margin-top: -2px;
+    margin-bottom: 25px;
+
+    color: #bbb;
   }
 }
 .channel__wrapper {
   float:right;
   width: 300px;
-  height: 60px;
+  height: 40px;
   overflow: hidden;
   position: relative;
+  @include breakpoint(large) {
+    height: 60px;
+  }
   @include breakpoint(mobile) {
     display: none;
   }
@@ -446,15 +487,23 @@
 }
 .channel__ico {
   float:right;
-  height: 60px;
+  height: 40px;
+  @include breakpoint(large) {
+    height: 60px;
+  }
 }
 .channel__info {
   float: right;
-  line-height: calc-rem(60px);
+  line-height: calc-rem(40px);
   padding-right: 20px;
   color: white;
-  height: calc-rem(60px);
-  font-size: calc-rem(15px);
+  height: calc-rem(40px);
+  font-size: calc-rem(13px);
+  @include breakpoint(large) {
+    font-size:calc-rem(15px);
+    line-height: calc-rem(60px);
+    height: calc-rem(60px);
+  }
 }
 .dp-footer__link {
   float: right;
@@ -462,7 +511,10 @@
   margin: 0 20px;
   color:white;
   font-family: $text__family--Roboto;
-  font-size:calc-rem(14px);
+  font-size:calc-rem(12px);
+  @include breakpoint(large) {
+    font-size:calc-rem(14px);
+  }
   @include transitionFor(all 300ms);
   @include breakpoint(mobile) {
     display: none;
@@ -478,22 +530,30 @@
   display: none;
   @include breakpoint(mobile){
     text-align: center;
-    line-height: 23px;
+    line-height: calc-rem(30px);
     width: 80%;
     margin: 0 auto;
-    color: white;
-    margin-top: 10px;
-    font-size: 14px;
+    color: #333;
+    margin-top: 30px;
+    font-size: calc-rem(17px);
     display: block;
   }
 }
 .download-button__wrapper {
+  display: none;
   width: 100%;
   text-align: center;
   margin-top: 20px;
   img {
-    height: 50px;
+    height: 41px;
     width: auto;
+    margin: 0 2px;
+  }
+  @include breakpoint(mobile) {
+    display:block;
+    margin: 0px;
+    margin-bottom: 14px;
+    margin-top: 34px;
   }
 }
 .screen-container__video--mobile{
