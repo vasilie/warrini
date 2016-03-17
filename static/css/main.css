@@ -721,11 +721,11 @@ p {
 
 .scroll__section--two {
   background: #31abaa;
-  background: linear-gradient(to bottom, #31abaa 0, #FDFDFD 100%); }
+  background: linear-gradient(to bottom, #31abaa 0, #EBEAE5 100%); }
 
 .scroll__section--three {
   background: #fff;
-  background: linear-gradient(to bottom, #FDFDFD 0, #FAFAFB 100%); }
+  background: linear-gradient(to bottom, #EBEAE5 0, #FAFAFB 100%); }
 
 .scroll__section--four {
   background: #fff;
@@ -1257,5 +1257,8 @@ p {
 @media (max-width: 1000px) {
   .dp-link__text {
     font-size: 0.75rem; } }
+
+#fp-nav ul li a.active span {
+  background: #FC2641 !important; }
 
 /*# sourceMappingURL=main.css.map */

@@ -9,6 +9,8 @@ $(function(){
     scrollingSpeed: 1500,
     loopBottom: false,
     loopTop: false,
+    navigation: true,
+    navigationPosition: 'right',
     easing: 'easeInOutCubic',
     afterRender: function(){
       $text_container = $(".text-slide");
@@ -16,11 +18,11 @@ $(function(){
       $channel = $(".channel");
       var height = $(window).height();
       $(".top-elements__container").css({"height":height+'px'});
-      $(".text-slide.active h2").delay(100).animate({"opacity":"1","top":"0px"},500);
-      $(".text-slide.active p").delay(250).animate({"opacity":"1","top":"0px"},500);
-      $(".text-slide.active .dp-buttons").delay(250).animate({"opacity":"1","top":"0px"},500);
-      $(".dp-link__container").delay(250).animate({"opacity":"1","top":"0px"},500);
-      $(".warrini-triangle").delay(250).animate({"opacity":"1","left":"6%"},500);
+      $(".text-slide.active h2").delay(200).animate({"opacity":"1","top":"0px"},500);
+      $(".text-slide.active p").delay(350).animate({"opacity":"1","top":"0px"},500);
+      $(".text-slide.active .dp-buttons").delay(350).animate({"opacity":"1","top":"0px"},500);
+      $(".dp-link__container").delay(350).animate({"opacity":"1","top":"0px"},500);
+      $(".warrini-triangle").delay(500).animate({"opacity":"1","left":"6%"},500);
     },
     onLeave: function(index, nextIndex, direction){
       if (direction == 'down'){
